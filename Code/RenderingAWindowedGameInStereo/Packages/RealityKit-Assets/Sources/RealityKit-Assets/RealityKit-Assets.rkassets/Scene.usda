@@ -1,0 +1,168 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0 (445.0.0.0.2)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root" (
+    references = None
+)
+{
+    def "TempleFrameBaked" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        customData = {
+            float3 rotationEulerHint = (-1.5707963, 0, 0)
+        }
+        references = @TempleFrameBaked.usdc@
+    )
+    {
+        reorder nameChildren = ["Plane_002", "Material"]
+        rel material:binding = </Root/TempleFrameBaked/Material> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        quatf xformOp:orient = (0.70710677, -0.7071067, 0, 0)
+        float3 xformOp:scale = (1, 0.99999994, 0.99999994)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "Material" (
+            references = None
+        )
+        {
+            token outputs:mtlx:surface.connect = </Root/TempleFrameBaked/Material/PreviewSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (335.05078, 68.94922)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 5
+
+            def Shader "PreviewSurface" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor.connect = </Root/TempleFrameBaked/Material/Image.outputs:out>
+                color3f inputs:emissiveColor
+                float inputs:ior
+                float inputs:metallic
+                float3 inputs:normal.connect = </Root/TempleFrameBaked/Material/NormalMapDecode.outputs:out>
+                float inputs:occlusion.connect = </Root/TempleFrameBaked/Material/Image_1.outputs:out>
+                float inputs:opacity
+                float inputs:opacityThreshold
+                float inputs:roughness = 0.5
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (54.75, 220.53516)
+                int ui:nodegraph:node:stackingOrder = 25
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+            }
+
+            def Shader "Image" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @Color.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-405.34766, -120.64844)
+                int ui:nodegraph:node:stackingOrder = 5
+            }
+
+            def Shader "Image_1" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @AO.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-525.90625, 85.97266)
+                int ui:nodegraph:node:stackingOrder = 16
+            }
+
+            def Shader "NormalMapDecode" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_normal_map_decode"
+                float3 inputs:in.connect = </Root/TempleFrameBaked/Material/Image_2.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-219.75269, 374.2605)
+                int ui:nodegraph:node:stackingOrder = 22
+            }
+
+            def Shader "Image_2" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @Normal.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-541.98956, 425.86887)
+                int ui:nodegraph:node:stackingOrder = 19
+            }
+        }
+    }
+
+    def "Rectangle" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        references = @Rectangle.usda@
+    )
+    {
+        reorder nameChildren = ["Plane", "Material"]
+        rel material:binding = </Root/Rectangle/Material> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        quatf xformOp:orient = (0.99999994, 0, 0, 0)
+        float3 xformOp:scale = (3.1306794, 3.1306794, 3.1306794)
+        float3 xformOp:translate = (0, 1.4315943, -0.113818884)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "Material" (
+            references = None
+        )
+        {
+            token outputs:mtlx:surface.connect = </Root/Rectangle/Material/UnlitSurface.outputs:out>
+            token outputs:realitykit:vertex
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (335.25, 100.5)
+
+            def Shader "UnlitSurface" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_realitykit_unlit_surfaceshader"
+                bool inputs:applyPostProcessToneMap
+                color3f inputs:color.connect = </Root/Rectangle/Material/Image.outputs:out>
+                bool inputs:hasPremultipliedAlpha
+                float inputs:opacity
+                float inputs:opacityThreshold
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (92.25391, 60.867188)
+                int ui:nodegraph:node:stackingOrder = 3
+            }
+
+            def Shader "Image" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DeferredLighting.jpg@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-227.01172, 33.726562)
+                int ui:nodegraph:node:stackingOrder = 4
+            }
+        }
+    }
+}
+

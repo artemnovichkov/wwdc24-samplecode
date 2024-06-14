@@ -1,0 +1,1 @@
+Map services and data are available from Large-Scale Solar Photovoltaic Database, provided by the U.S. Geological Survey and Lawrence Berkeley National Laboratory via https://eerscmap.usgs.gov/uspvdb

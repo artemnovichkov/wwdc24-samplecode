@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4JZ-7u-4EQ">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="dJe-rc-Vyp">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t4F-S0-ZH5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="vUC-1T-rdE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Search" id="a3j-Rb-LLI">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Show Map" image="map" catalog="system" id="jE5-MF-Lwi"/>
+                            <barButtonItem title="Settings" id="gps-f2-uCP">
+                                <imageReference key="image" image="gearshape" catalog="system" symbolScale="default"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="316" y="29"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="mhH-N8-TRy">
+            <objects>
+                <splitViewController allowDoubleColumnStyle="YES" preferredDisplayMode="beside" primaryBackgroundStyle="sidebar" id="4JZ-7u-4EQ" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="UZA-hy-4iy" kind="relationship" relationship="masterViewController" id="SnB-Fo-uFB"/>
+                        <segue destination="BNA-2Z-8kY" kind="relationship" relationship="detailViewController" id="6ai-ts-veP"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNC-jz-wfW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1714" y="419"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="oyg-4l-9HB">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="UZA-hy-4iy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="Jza-hF-oh9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="rlp-5L-iEr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vUC-1T-rdE" kind="relationship" relationship="rootViewController" id="125-5t-1Vu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Uc-S8-DIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450" y="30"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="6Zf-pQ-euo">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MKc-3J-zDT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="39e-yi-xvq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V2L-Ob-b1s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="oiT-QO-yGs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Explore" largeTitleDisplayMode="never" id="ldB-2C-ex1"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="316" y="833"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Za2-Uf-Omm">
+            <objects>
+                <navigationController id="BNA-2Z-8kY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="eLd-C6-1rS"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="jXL-NY-fOA">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="39e-yi-xvq" kind="relationship" relationship="rootViewController" id="Enc-YN-tXV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MDc-tW-Gsl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450" y="833"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="map" catalog="system" width="128" height="112"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

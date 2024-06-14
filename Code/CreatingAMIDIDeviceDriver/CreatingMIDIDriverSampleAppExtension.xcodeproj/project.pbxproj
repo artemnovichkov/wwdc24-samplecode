@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		321DB8952BA0AA1B00E096A2 /* CreatingMIDIDriverSampleAppUserClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 321DB8942BA0AA1200E096A2 /* CreatingMIDIDriverSampleAppUserClient.mm */; };
+		322AAD812AF94062003BAE81 /* CreatingMIDIDriverSampleAppDevice.iig in Sources */ = {isa = PBXBuildFile; fileRef = 322AAD802AF94062003BAE81 /* CreatingMIDIDriverSampleAppDevice.iig */; };
+		322AAD832AF940F2003BAE81 /* CreatingMIDIDriverSampleAppDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 322AAD822AF940F2003BAE81 /* CreatingMIDIDriverSampleAppDevice.cpp */; };
+		325C76472BA0586F00E4D241 /* CreatingMIDIDriverSampleAppDriverUserClient.iig in Sources */ = {isa = PBXBuildFile; fileRef = 325C76462BA0586F00E4D241 /* CreatingMIDIDriverSampleAppDriverUserClient.iig */; };
+		325C764A2BA0592F00E4D241 /* CreatingMIDIDriverSampleAppDriverUserClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 325C76482BA0588B00E4D241 /* CreatingMIDIDriverSampleAppDriverUserClient.cpp */; };
+		325C76502BA0A3D100E4D241 /* CreatingMIDIDriverSampleAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325C764F2BA0A3C900E4D241 /* CreatingMIDIDriverSampleAppView.swift */; };
+		325C76522BA0A41300E4D241 /* CreatingMIDIDriverSampleAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325C76512BA0A40D00E4D241 /* CreatingMIDIDriverSampleAppViewModel.swift */; };
+		328B3DC52AEFA2C100529A1F /* CreatingMIDIDriverSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328B3DC42AEFA2C100529A1F /* CreatingMIDIDriverSampleApp.swift */; };
+		32C5C9402AF0F34C00303BAF /* MIDIDriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328B3E082AEFA77400529A1F /* MIDIDriverKit.framework */; };
+		62A475552515566600B50752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A475542515566600B50752 /* Assets.xcassets */; };
+		62A475582515566600B50752 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A475572515566600B50752 /* Preview Assets.xcassets */; };
+		62A475662515567200B50752 /* DriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A475652515567200B50752 /* DriverKit.framework */; };
+		62A475692515567200B50752 /* CreatingMIDIDriverSampleAppDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62A475682515567200B50752 /* CreatingMIDIDriverSampleAppDriver.cpp */; };
+		62A4756B2515567200B50752 /* CreatingMIDIDriverSampleAppDriver.iig in Sources */ = {isa = PBXBuildFile; fileRef = 62A4756A2515567200B50752 /* CreatingMIDIDriverSampleAppDriver.iig */; };
+		62A475702515567200B50752 /* com.example.apple-samplecode.ExampleDriver.Driver.dext in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 62A475632515567200B50752 /* com.example.apple-samplecode.ExampleDriver.Driver.dext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		62A4756E2515567200B50752 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62A4752F2515563B00B50752 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62A475622515567200B50752;
+			remoteInfo = MyDext;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		62A475742515567200B50752 /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				62A475702515567200B50752 /* com.example.apple-samplecode.ExampleDriver.Driver.dext in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2B8F4244FA583D85E99737FB /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		321DB8922BA0A98600E096A2 /* CreatingMIDIDriverSampleAppDriverKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreatingMIDIDriverSampleAppDriverKeys.h; sourceTree = "<group>"; };
+		321DB8932BA0A9DC00E096A2 /* CreatingMIDIDriverSampleAppUserClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreatingMIDIDriverSampleAppUserClient.h; sourceTree = "<group>"; };
+		321DB8942BA0AA1200E096A2 /* CreatingMIDIDriverSampleAppUserClient.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CreatingMIDIDriverSampleAppUserClient.mm; sourceTree = "<group>"; };
+		322AAD7F2AF93EB8003BAE81 /* CreatingMIDIDriverSampleAppDriverKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreatingMIDIDriverSampleAppDriverKeys.h; sourceTree = "<group>"; };
+		322AAD802AF94062003BAE81 /* CreatingMIDIDriverSampleAppDevice.iig */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.iig; path = CreatingMIDIDriverSampleAppDevice.iig; sourceTree = "<group>"; };
+		322AAD822AF940F2003BAE81 /* CreatingMIDIDriverSampleAppDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CreatingMIDIDriverSampleAppDevice.cpp; sourceTree = "<group>"; };
+		325C76462BA0586F00E4D241 /* CreatingMIDIDriverSampleAppDriverUserClient.iig */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.iig; path = CreatingMIDIDriverSampleAppDriverUserClient.iig; sourceTree = "<group>"; };
+		325C76482BA0588B00E4D241 /* CreatingMIDIDriverSampleAppDriverUserClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CreatingMIDIDriverSampleAppDriverUserClient.cpp; sourceTree = "<group>"; };
+		325C764F2BA0A3C900E4D241 /* CreatingMIDIDriverSampleAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingMIDIDriverSampleAppView.swift; sourceTree = "<group>"; };
+		325C76512BA0A40D00E4D241 /* CreatingMIDIDriverSampleAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingMIDIDriverSampleAppViewModel.swift; sourceTree = "<group>"; };
+		328B3DC42AEFA2C100529A1F /* CreatingMIDIDriverSampleApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatingMIDIDriverSampleApp.swift; sourceTree = "<group>"; };
+		328B3E082AEFA77400529A1F /* MIDIDriverKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MIDIDriverKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6286B478252E3F4900A9A513 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		629413EB2518F5AB00478C2B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		62A4754E2515566500B50752 /* CreatingMIDIDriverSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreatingMIDIDriverSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62A475542515566600B50752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		62A475572515566600B50752 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		62A475592515566600B50752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62A4755A2515566600B50752 /* CreatingMIDIDriverSampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CreatingMIDIDriverSampleApp.entitlements; sourceTree = "<group>"; };
+		62A475632515567200B50752 /* com.example.apple-samplecode.ExampleDriver.Driver.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = "com.example.apple-samplecode.ExampleDriver.Driver.dext"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62A475652515567200B50752 /* DriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DriverKit.framework; path = System/Library/Frameworks/DriverKit.framework; sourceTree = SDKROOT; };
+		62A475682515567200B50752 /* CreatingMIDIDriverSampleAppDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CreatingMIDIDriverSampleAppDriver.cpp; sourceTree = "<group>"; };
+		62A4756A2515567200B50752 /* CreatingMIDIDriverSampleAppDriver.iig */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.iig; path = CreatingMIDIDriverSampleAppDriver.iig; sourceTree = "<group>"; };
+		62A4756C2515567200B50752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62A4756D2515567200B50752 /* CreatingMIDIDriverSampleAppDriver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CreatingMIDIDriverSampleAppDriver.entitlements; sourceTree = "<group>"; };
+		65FB999F2BE8ECF800C277FA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F2584EAF8EE3D1F2D2AAA298 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62A4754B2515566500B50752 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A475602515567200B50752 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32C5C9402AF0F34C00303BAF /* MIDIDriverKit.framework in Frameworks */,
+				62A475662515567200B50752 /* DriverKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		310C5BA57703AA04614972A0 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				2B8F4244FA583D85E99737FB /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		62A4752E2515563B00B50752 = {
+			isa = PBXGroup;
+			children = (
+				65FB999F2BE8ECF800C277FA /* README.md */,
+				62A4754F2515566500B50752 /* CreatingMIDIDriverSampleApp */,
+				62A475672515567200B50752 /* CreatingMIDIDriverSampleAppExtension */,
+				62A475642515567200B50752 /* Frameworks */,
+				62A475382515563B00B50752 /* Products */,
+				310C5BA57703AA04614972A0 /* Configuration */,
+				8AD2BFAE092AC7759DB71BA3 /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		62A475382515563B00B50752 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62A4754E2515566500B50752 /* CreatingMIDIDriverSampleApp.app */,
+				62A475632515567200B50752 /* com.example.apple-samplecode.ExampleDriver.Driver.dext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62A4754F2515566500B50752 /* CreatingMIDIDriverSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				328B3DC42AEFA2C100529A1F /* CreatingMIDIDriverSampleApp.swift */,
+				325C764F2BA0A3C900E4D241 /* CreatingMIDIDriverSampleAppView.swift */,
+				325C76512BA0A40D00E4D241 /* CreatingMIDIDriverSampleAppViewModel.swift */,
+				62A475542515566600B50752 /* Assets.xcassets */,
+				62A475592515566600B50752 /* Info.plist */,
+				62A4755A2515566600B50752 /* CreatingMIDIDriverSampleApp.entitlements */,
+				62A475562515566600B50752 /* Preview Content */,
+				321DB8922BA0A98600E096A2 /* CreatingMIDIDriverSampleAppDriverKeys.h */,
+				321DB8932BA0A9DC00E096A2 /* CreatingMIDIDriverSampleAppUserClient.h */,
+				321DB8942BA0AA1200E096A2 /* CreatingMIDIDriverSampleAppUserClient.mm */,
+			);
+			path = CreatingMIDIDriverSampleApp;
+			sourceTree = "<group>";
+		};
+		62A475562515566600B50752 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				62A475572515566600B50752 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		62A475642515567200B50752 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				328B3E082AEFA77400529A1F /* MIDIDriverKit.framework */,
+				6286B478252E3F4900A9A513 /* CoreFoundation.framework */,
+				629413EB2518F5AB00478C2B /* IOKit.framework */,
+				62A475652515567200B50752 /* DriverKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62A475672515567200B50752 /* CreatingMIDIDriverSampleAppExtension */ = {
+			isa = PBXGroup;
+			children = (
+				322AAD822AF940F2003BAE81 /* CreatingMIDIDriverSampleAppDevice.cpp */,
+				322AAD802AF94062003BAE81 /* CreatingMIDIDriverSampleAppDevice.iig */,
+				62A475682515567200B50752 /* CreatingMIDIDriverSampleAppDriver.cpp */,
+				62A4756A2515567200B50752 /* CreatingMIDIDriverSampleAppDriver.iig */,
+				62A4756C2515567200B50752 /* Info.plist */,
+				62A4756D2515567200B50752 /* CreatingMIDIDriverSampleAppDriver.entitlements */,
+				322AAD7F2AF93EB8003BAE81 /* CreatingMIDIDriverSampleAppDriverKeys.h */,
+				325C76462BA0586F00E4D241 /* CreatingMIDIDriverSampleAppDriverUserClient.iig */,
+				325C76482BA0588B00E4D241 /* CreatingMIDIDriverSampleAppDriverUserClient.cpp */,
+			);
+			path = CreatingMIDIDriverSampleAppExtension;
+			sourceTree = "<group>";
+		};
+		8AD2BFAE092AC7759DB71BA3 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				F2584EAF8EE3D1F2D2AAA298 /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		62A4755E2515567200B50752 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		62A4754D2515566500B50752 /* CreatingMIDIDriverSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62A4755B2515566600B50752 /* Build configuration list for PBXNativeTarget "CreatingMIDIDriverSampleApp" */;
+			buildPhases = (
+				62A4754A2515566500B50752 /* Sources */,
+				62A4754B2515566500B50752 /* Frameworks */,
+				62A4754C2515566500B50752 /* Resources */,
+				62A475742515567200B50752 /* Embed System Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62A4756F2515567200B50752 /* PBXTargetDependency */,
+			);
+			name = CreatingMIDIDriverSampleApp;
+			productName = MyDriver;
+			productReference = 62A4754E2515566500B50752 /* CreatingMIDIDriverSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		62A475622515567200B50752 /* ExampleDriver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62A475712515567200B50752 /* Build configuration list for PBXNativeTarget "ExampleDriver" */;
+			buildPhases = (
+				62A4755E2515567200B50752 /* Headers */,
+				62A4755F2515567200B50752 /* Sources */,
+				62A475602515567200B50752 /* Frameworks */,
+				62A475612515567200B50752 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExampleDriver;
+			productName = MyDext;
+			productReference = 62A475632515567200B50752 /* com.example.apple-samplecode.ExampleDriver.Driver.dext */;
+			productType = "com.apple.product-type.driver-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62A4752F2515563B00B50752 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Latest;
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1220;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					62A4754D2515566500B50752 = {
+						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1600;
+					};
+					62A475622515567200B50752 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 62A475322515563B00B50752 /* Build configuration list for PBXProject "CreatingMIDIDriverSampleAppExtension" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 62A4752E2515563B00B50752;
+			productRefGroup = 62A475382515563B00B50752 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62A4754D2515566500B50752 /* CreatingMIDIDriverSampleApp */,
+				62A475622515567200B50752 /* ExampleDriver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62A4754C2515566500B50752 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62A475582515566600B50752 /* Preview Assets.xcassets in Resources */,
+				62A475552515566600B50752 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A475612515567200B50752 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62A4754A2515566500B50752 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325C76502BA0A3D100E4D241 /* CreatingMIDIDriverSampleAppView.swift in Sources */,
+				328B3DC52AEFA2C100529A1F /* CreatingMIDIDriverSampleApp.swift in Sources */,
+				321DB8952BA0AA1B00E096A2 /* CreatingMIDIDriverSampleAppUserClient.mm in Sources */,
+				325C76522BA0A41300E4D241 /* CreatingMIDIDriverSampleAppViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A4755F2515567200B50752 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				325C764A2BA0592F00E4D241 /* CreatingMIDIDriverSampleAppDriverUserClient.cpp in Sources */,
+				62A4756B2515567200B50752 /* CreatingMIDIDriverSampleAppDriver.iig in Sources */,
+				325C76472BA0586F00E4D241 /* CreatingMIDIDriverSampleAppDriverUserClient.iig in Sources */,
+				322AAD812AF94062003BAE81 /* CreatingMIDIDriverSampleAppDevice.iig in Sources */,
+				322AAD832AF940F2003BAE81 /* CreatingMIDIDriverSampleAppDevice.cpp in Sources */,
+				62A475692515567200B50752 /* CreatingMIDIDriverSampleAppDriver.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		62A4756F2515567200B50752 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62A475622515567200B50752 /* ExampleDriver */;
+			targetProxy = 62A4756E2515567200B50752 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		62A475452515563C00B50752 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B8F4244FA583D85E99737FB /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = driverkit;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		62A475462515563C00B50752 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B8F4244FA583D85E99737FB /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = driverkit;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		62A4755C2515566600B50752 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B8F4244FA583D85E99737FB /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CreatingMIDIDriverSampleApp/CreatingMIDIDriverSampleApp.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"CreatingMIDIDriverSampleApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				INFOPLIST_FILE = CreatingMIDIDriverSampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.CreatingMIDIDriverSampleApp${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = CreatingMIDIDriverSampleApp/CreatingMIDIDriverSampleAppUserClient.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		62A4755D2515566600B50752 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B8F4244FA583D85E99737FB /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = CreatingMIDIDriverSampleApp/CreatingMIDIDriverSampleApp.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"CreatingMIDIDriverSampleApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				INFOPLIST_FILE = CreatingMIDIDriverSampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.CreatingMIDIDriverSampleApp${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = CreatingMIDIDriverSampleApp/CreatingMIDIDriverSampleAppUserClient.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		62A475722515567200B50752 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B8F4244FA583D85E99737FB /* SampleCode.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = CreatingMIDIDriverSampleAppExtension/CreatingMIDIDriverSampleAppDriver.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				DRIVERKIT_DEPLOYMENT_TARGET = 24.0;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				INFOPLIST_FILE = CreatingMIDIDriverSampleAppExtension/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.ExampleDriver${SAMPLE_CODE_DISAMBIGUATOR}.Driver";
+				PRODUCT_NAME = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = driverkit;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		62A475732515567200B50752 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B8F4244FA583D85E99737FB /* SampleCode.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = CreatingMIDIDriverSampleAppExtension/CreatingMIDIDriverSampleAppDriver.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				DRIVERKIT_DEPLOYMENT_TARGET = 24.0;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				INFOPLIST_FILE = CreatingMIDIDriverSampleAppExtension/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.ExampleDriver${SAMPLE_CODE_DISAMBIGUATOR}.Driver";
+				PRODUCT_NAME = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = driverkit;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62A475322515563B00B50752 /* Build configuration list for PBXProject "CreatingMIDIDriverSampleAppExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62A475452515563C00B50752 /* Debug */,
+				62A475462515563C00B50752 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62A4755B2515566600B50752 /* Build configuration list for PBXNativeTarget "CreatingMIDIDriverSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62A4755C2515566600B50752 /* Debug */,
+				62A4755D2515566600B50752 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62A475712515567200B50752 /* Build configuration list for PBXNativeTarget "ExampleDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62A475722515567200B50752 /* Debug */,
+				62A475732515567200B50752 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62A4752F2515563B00B50752 /* Project object */;
+}

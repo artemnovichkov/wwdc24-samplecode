@@ -1,0 +1,30 @@
+/*
+See the LICENSE.txt file for this sample’s licensing information.
+
+Abstract:
+The declaration of CreatingMIDIDriverSampleAppDriverUserClient, which sets up and manages the
+	 client-side communication to the MIDI driver.
+*/
+
+#ifndef CreatingMIDIDriverSampleAppDriverUserClient_h
+#define CreatingMIDIDriverSampleAppDriverUserClient_h
+
+#include <DriverKit/IOUserClient.iig>
+
+class CreatingMIDIDriverSampleAppDriverUserClient : public IOUserClient
+{
+public:
+	virtual bool init() final;
+	virtual void free() final;
+
+	virtual kern_return_t Start(IOService* provider) final;
+	virtual kern_return_t Stop(IOService* provider) final;
+
+	virtual kern_return_t ExternalMethod(uint64_t selector,
+										 IOUserClientMethodArguments* arguments,
+										 const IOUserClientMethodDispatch* dispatch,
+										 OSObject* target,
+										 void* reference) final;
+};
+
+#endif /* CreatingMIDIDriverSampleAppDriverUserClient_h */

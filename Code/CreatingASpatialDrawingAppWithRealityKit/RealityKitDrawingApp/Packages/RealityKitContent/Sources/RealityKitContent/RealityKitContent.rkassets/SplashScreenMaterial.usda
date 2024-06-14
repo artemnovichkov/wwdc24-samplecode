@@ -1,0 +1,319 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0"
+    }
+    defaultPrim = "Test"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+reorder rootPrims = ["Material", "Test", "Root"]
+
+def Xform "Root" (
+    active = true
+)
+{
+    reorder nameChildren = ["Test", "Material"]
+    quatf xformOp:orient = (1, 0, 0, 0)
+    float3 xformOp:scale = (1, 1, 1)
+    float3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def Xform "Test"
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 2.220446e-16)
+        float3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Cube "Cube" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Material> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            double size = 0.2
+            float3 xformOp:scale = (1.505, 1.054, 0.1)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+    }
+
+    def Material "Material" (
+        references = None
+    )
+    {
+        reorder nameChildren = ["ShapeDescription", "PrimaryColor", "UnlitSurface", "Highlight", "Multiply"]
+        asset inputs:DistanceFieldTexture = @ExampleSplashScreenBackground.png@ (
+            colorSpace = "lin_srgb"
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-1535.6096, 303.48737)
+                    int stackingOrderInSubgraph = 910
+                }
+            }
+        )
+        token outputs:mtlx:surface.connect = </Root/Material/UnlitSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (-325.1369, 316.92712)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 914
+
+        def NodeGraph "PrimaryColor" (
+            references = None
+        )
+        {
+            color3f inputs:BackgroundColor = (0, 0, 0) (
+                colorSpace = "lin_srgb"
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (291.375, -42.378906)
+                        int stackingOrderInSubgraph = 232
+                    }
+                }
+            )
+            float inputs:DistanceField = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (158.48047, 183.5586)
+                        int stackingOrderInSubgraph = 263
+                    }
+                }
+            )
+            float inputs:DistanceField.connect = </Root/Material/ShapeDescription.outputs:DistanceField>
+            color3f inputs:StrokeColor = (0.21, 0.51479685, 1) (
+                colorSpace = "lin_srgb"
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (283.7461, -108.80469)
+                        int stackingOrderInSubgraph = 234
+                    }
+                }
+            )
+            color3f outputs:Mix_out.connect = </Root/Material/PrimaryColor/Mix.outputs:out>
+            float2 ui:nodegraph:node:pos = (-1074.6447, 200.90248)
+            int ui:nodegraph:node:stackingOrder = 906
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:Ifgreater_value2", "inputs:StrokeColor", "inputs:StrokeColor"]
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (736.10547, -8.503906)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 236
+
+            def Shader "Mix"
+            {
+                uniform token info:id = "ND_mix_color3"
+                color3f inputs:bg = (0.04082107, 0.05249584, 0.05936437) (
+                    colorSpace = "lin_srgb"
+                )
+                color3f inputs:bg.connect = </Root/Material/PrimaryColor.inputs:BackgroundColor>
+                color3f inputs:fg = (0.024611972, 0.3672788, 0.5688776) (
+                    colorSpace = "lin_srgb"
+                )
+                color3f inputs:fg.connect = </Root/Material/PrimaryColor.inputs:StrokeColor>
+                float inputs:mix = 0
+                float inputs:mix.connect = </Root/Material/PrimaryColor/Ifgreater.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (525.16406, -35.097656)
+                int ui:nodegraph:node:stackingOrder = 230
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:fg", "inputs:fg", "inputs:fg"]
+            }
+
+            def Shader "Ifgreater"
+            {
+                uniform token info:id = "ND_ifgreater_float"
+                float inputs:in1 = 1
+                float inputs:in2 = 0
+                float inputs:value1 = 0.35
+                float inputs:value1.connect = None
+                float inputs:value2.connect = </Root/Material/PrimaryColor.inputs:DistanceField>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (340.16016, 179.9375)
+                int ui:nodegraph:node:stackingOrder = 263
+            }
+
+            def Scope "Group" (
+                kind = "group"
+            )
+            {
+                string ui:group:annotation = "Use the Distance Field to determine color"
+                string ui:group:annotationDescription = "If the distance field value is below a threshold, then show the StrokeColor.  Otherwise, show the BackgroundColor"
+                string[] ui:group:members = ["p:Ifgreater", "i:inputs:DistanceField"]
+            }
+        }
+
+        def Shader "UnlitSurface" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_realitykit_unlit_surfaceshader"
+            bool inputs:applyPostProcessToneMap = 0
+            color3f inputs:color.connect = </Root/Material/Multiply.outputs:out>
+            bool inputs:hasPremultipliedAlpha = 1
+            float inputs:opacity = 0
+            float inputs:opacity.connect = None
+            float inputs:opacityThreshold
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (-562.4719, 263.0879)
+            int ui:nodegraph:node:stackingOrder = 915
+        }
+
+        def NodeGraph "Highlight" (
+            references = None
+        )
+        {
+            color3f inputs:Color = (0, 0, 0) (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (385.20703, 47.859375)
+                        int stackingOrderInSubgraph = 1128
+                    }
+                }
+            )
+            color3f inputs:Color.connect = </Root/Material/PrimaryColor.outputs:Mix_out>
+            float inputs:DistanceField = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (122.84766, 116.6875)
+                        int stackingOrderInSubgraph = 1128
+                    }
+                }
+            )
+            float inputs:DistanceField.connect = None
+            color3f outputs:Plus_out.connect = </Root/Material/Highlight/Plus.outputs:out>
+            float2 ui:nodegraph:node:pos = (-889.0693, 206.3843)
+            int ui:nodegraph:node:stackingOrder = 889
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:Plus_out"]
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (750.9453, 105.63281)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 1090
+
+            def Shader "Convert"
+            {
+                uniform token info:id = "ND_convert_float_color3"
+                float inputs:in.connect = </Root/Material/Highlight/Multiply.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (387.8125, 115.03906)
+                int ui:nodegraph:node:stackingOrder = 1128
+            }
+
+            def Shader "Plus"
+            {
+                uniform token info:id = "ND_plus_color3"
+                color3f inputs:bg.connect = </Root/Material/Highlight/Convert.outputs:out>
+                color3f inputs:fg.connect = </Root/Material/Highlight.inputs:Color>
+                float inputs:mix
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (568.2656, 78.49219)
+                int ui:nodegraph:node:stackingOrder = 1128
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:bg", "inputs:mix"]
+            }
+
+            def Shader "Multiply"
+            {
+                uniform token info:id = "ND_multiply_float"
+                float inputs:in1.connect = </Root/Material/Highlight.inputs:DistanceField>
+                float inputs:in2 = -0.5
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (273.46484, 117.6875)
+                int ui:nodegraph:node:stackingOrder = 1128
+            }
+
+            def Scope "Group" (
+                kind = "group"
+            )
+            {
+                string ui:group:annotation = "Add a white highlight to the pill shapes"
+                string ui:group:annotationDescription = "These nodes apply a slight white highlight for regions of the distance field which are deep inside the pill shapes."
+                string[] ui:group:members = ["p:Plus", "p:Multiply", "p:Convert", "i:inputs:Color", "i:inputs:DistanceField"]
+            }
+        }
+
+        def Shader "Multiply"
+        {
+            uniform token info:id = "ND_multiply_color3FA"
+            color3f inputs:in1.connect = </Root/Material/Highlight.outputs:Plus_out>
+            float inputs:in2.connect = </Root/Material/ShapeDescription.outputs:Opacity>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-741.51074, 335.54572)
+            int ui:nodegraph:node:stackingOrder = 891
+        }
+
+        def NodeGraph "ShapeDescription" (
+            references = None
+        )
+        {
+            asset inputs:DistanceFieldTexture (
+                colorSpace = ""
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (-271.25955, 113.25905)
+                        int stackingOrderInSubgraph = 427
+                    }
+                }
+            )
+            asset inputs:DistanceFieldTexture.connect = </Root/Material.inputs:DistanceFieldTexture>
+            float outputs:DistanceField (
+                customData = {
+                    dictionary realitykit = {
+                        int stackingOrderInSubgraph = 433
+                    }
+                }
+            )
+            float outputs:DistanceField.connect = </Root/Material/ShapeDescription/Separate.outputs:outx>
+            float outputs:Opacity (
+                customData = {
+                    dictionary realitykit = {
+                        int stackingOrderInSubgraph = 433
+                    }
+                }
+            )
+            float outputs:Opacity.connect = </Root/Material/ShapeDescription/Separate.outputs:outy>
+            float2 ui:nodegraph:node:pos = (-1302.9208, 298.6711)
+            int ui:nodegraph:node:stackingOrder = 908
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:Ifgreater_outr", "outputs:Ifgreater_outr", "outputs:Opacity", "outputs:Opacity"]
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (426.61005, 126.379105)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 435
+
+            def Shader "Separate"
+            {
+                uniform token info:id = "ND_separate4_vector4"
+                float4 inputs:in.connect = </Root/Material/ShapeDescription/Image.outputs:out>
+                float outputs:outw
+                float outputs:outx
+                float outputs:outy
+                float outputs:outz
+                float2 ui:nodegraph:node:pos = (223.51602, 174.8737)
+                int ui:nodegraph:node:stackingOrder = 464
+            }
+
+            def Shader "Image"
+            {
+                uniform token info:id = "ND_image_vector4"
+                asset inputs:file.connect = </Root/Material/ShapeDescription.inputs:DistanceFieldTexture>
+                string inputs:filtertype
+                float2 inputs:texcoord
+                string inputs:vaddressmode
+                float4 outputs:out
+                float2 ui:nodegraph:node:pos = (-1.7798672, 142.61502)
+                int ui:nodegraph:node:stackingOrder = 464
+            }
+
+            def Scope "Group" (
+                kind = "group"
+            )
+            {
+                string ui:group:annotation = "Extract Shape Description"
+                string ui:group:annotationDescription = "The distance field describing the pill shapes is provided in the red channel of this texture.  The opacity is provided in the green channel of this texture."
+                string[] ui:group:members = ["p:Separate", "p:Image"]
+            }
+        }
+
+        def Scope "Group" (
+            kind = "group"
+        )
+        {
+            string ui:group:annotation = "Additive Blending"
+            string ui:group:annotationDescription = 'To use additive blend mode with UnlitSurface, set Opacity to 0 and "Has Premultiplied Alpha" to true.'
+            string[] ui:group:members = ["p:UnlitSurface"]
+        }
+    }
+}
+

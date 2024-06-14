@@ -1,0 +1,48 @@
+/*
+See the LICENSE.txt file for this sample’s licensing information.
+
+Abstract:
+The declaration of CreatingMIDIDriverSampleAppDevice, a MIDIDriverKit device that does
+     a basic MIDI roundtrip, copying data from the input port to the output port.
+*/
+
+#ifndef CreatingMIDIDriverSampleAppDevice_h
+#define CreatingMIDIDriverSampleAppDevice_h
+
+#include <DriverKit/DriverKit.iig>
+#include <MIDIDriverKit/IOUserMIDIDevice.iig>
+
+using namespace MIDIDriverKit;
+
+constexpr uint64_t kAddPortConfigChangeAction = 'remp';
+constexpr uint64_t kRemovePortConfigChangeAction = 'addp';
+
+class IOUserMIDIDriver;
+
+class CreatingMIDIDriverSampleAppDevice : public IOUserMIDIDevice
+{
+public:
+	virtual bool init(IOUserMIDIDriver* driver,
+					  OSString* name,
+					  OSString* model,
+					  OSString* manufacturer) final LOCALONLY;
+
+	virtual void free() override LOCALONLY;
+
+	virtual kern_return_t StartIO() override LOCALONLY;
+	virtual kern_return_t StopIO() override LOCALONLY;
+
+	virtual kern_return_t PerformDeviceConfigurationChange(uint64_t changeAction,
+														   OSObject* changeInfo) override LOCALONLY;
+	virtual kern_return_t AbortDeviceConfigurationChange(uint64_t changeAction,
+														 OSObject* changeInfo) override LOCALONLY;
+
+	void SetupEntities() LOCALONLY;
+	
+	// User client actions.
+	kern_return_t AddPort() LOCALONLY;
+	kern_return_t RemovePort() LOCALONLY;
+	kern_return_t ToggleOffline() LOCALONLY;
+};
+
+#endif /* CreatingMIDIDriverSampleAppDevice_h */

@@ -1,0 +1,8 @@
+{
+    "Animals"                       : [ "Cat", "Dog" ],
+    "Colors"                        : [ "Blue", "Green", "Orange", "Purple", "Red", "Yellow" ],
+    "Fruits"                        : [ "Apple", "Pear" ],
+    "SharePlay Developer Sessions"  : [ "Share files with SharePlay", "Build spatial SharePlay experiences", "Add SharePlay to your app" ],
+    "SharePlay Sample Apps"         : [ "Draw Together", "Explore Together", "Group Watching", "Guess Together" ],
+    "Vegetables"                    : [ "Asparagus", "Lettuce" ]
+}

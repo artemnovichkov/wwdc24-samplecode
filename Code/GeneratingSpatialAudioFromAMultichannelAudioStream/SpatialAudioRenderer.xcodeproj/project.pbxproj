@@ -1,0 +1,550 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		643D797B291EC73400910294 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 643D797A291EC73400910294 /* AudioToolbox.framework */; };
+		643D797D291EC73F00910294 /* AVFAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 643D797C291EC73F00910294 /* AVFAudio.framework */; };
+		643D797F291EC74C00910294 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 643D797E291EC74C00910294 /* CoreAudio.framework */; };
+		64869E6029526303003BF623 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64869E5F29526303003BF623 /* IOKit.framework */; platformFilters = (macos, ); };
+		648C56E629E7655300EC86B2 /* named_channels.wav in Resources */ = {isa = PBXBuildFile; fileRef = 648C56E529E7655300EC86B2 /* named_channels.wav */; };
+		F0C15F3129C8B08C0081251E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0C15F1429C8B08C0081251E /* Assets.xcassets */; };
+		F0C15F3229C8B08C0081251E /* SpatialAudioRendererApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C15F1529C8B08C0081251E /* SpatialAudioRendererApp.swift */; };
+		F0C15F3329C8B08C0081251E /* ChainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C15F1929C8B08C0081251E /* ChainViewModel.swift */; };
+		F0C15F3429C8B08C0081251E /* ChainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C15F1A29C8B08C0081251E /* ChainView.swift */; };
+		F0C15F3529C8B08C0081251E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C15F1B29C8B08C0081251E /* ContentView.swift */; };
+		F0C15F3629C8B08C0081251E /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C15F1C29C8B08C0081251E /* Arrow.swift */; };
+		F0C15F3729C8B08C0081251E /* AudioFileReader.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0C15F2229C8B08C0081251E /* AudioFileReader.mm */; };
+		F0C15F3829C8B08C0081251E /* AUSMRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0C15F2329C8B08C0081251E /* AUSMRenderer.mm */; };
+		F0C15F3929C8B08C0081251E /* OutputAU.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0C15F2529C8B08C0081251E /* OutputAU.mm */; };
+		F0C15F3A29C8B08C0081251E /* AudioEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0C15F2629C8B08C0081251E /* AudioEngine.mm */; };
+		F0C15F3D29C8B09A0081251E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0C15F3C29C8B09A0081251E /* README.md */; };
+		F0C15F4029C9FD230081251E /* game.wav in Resources */ = {isa = PBXBuildFile; fileRef = F0C15F1229C8B08C0081251E /* game.wav */; };
+		F0C15F4129C9FD260081251E /* voice.wav in Resources */ = {isa = PBXBuildFile; fileRef = F0C15F1329C8B08C0081251E /* voice.wav */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		64F7DB8C29956361004560AD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "Supporting Files";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		330D5DA1C4B17FC56E2BD60C /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		3805AD9FABC232CD8FC1EBB3 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		3939BA652422A1B7006E398A /* AudioToolbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AudioToolbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3939BA692422A1BF006E398A /* AudioToolbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AudioToolbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3939BA772422ACAF006E398A /* libEmbeddedSystemAUs.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEmbeddedSystemAUs.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		39B22CF62423A40100C160C8 /* libEmbeddedSystemAUs.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEmbeddedSystemAUs.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		39B22CF92423A5E700C160C8 /* CoreAudio.component */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = CoreAudio.component; sourceTree = BUILT_PRODUCTS_DIR; };
+		643D7962291EC6DF00910294 /* SpatialAudioRenderer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpatialAudioRenderer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		643D797A291EC73400910294 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.0.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		643D797C291EC73F00910294 /* AVFAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFAudio.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.0.sdk/System/Library/Frameworks/AVFAudio.framework; sourceTree = DEVELOPER_DIR; };
+		643D797E291EC74C00910294 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.0.sdk/System/Library/Frameworks/CoreAudio.framework; sourceTree = DEVELOPER_DIR; };
+		64869E5F29526303003BF623 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		648C56E529E7655300EC86B2 /* named_channels.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = named_channels.wav; sourceTree = "<group>"; };
+		F0C15F1229C8B08C0081251E /* game.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = game.wav; sourceTree = "<group>"; };
+		F0C15F1329C8B08C0081251E /* voice.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = voice.wav; sourceTree = "<group>"; };
+		F0C15F1429C8B08C0081251E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0C15F1529C8B08C0081251E /* SpatialAudioRendererApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpatialAudioRendererApp.swift; sourceTree = "<group>"; };
+		F0C15F1929C8B08C0081251E /* ChainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainViewModel.swift; sourceTree = "<group>"; };
+		F0C15F1A29C8B08C0081251E /* ChainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainView.swift; sourceTree = "<group>"; };
+		F0C15F1B29C8B08C0081251E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F0C15F1C29C8B08C0081251E /* Arrow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
+		F0C15F1E29C8B08C0081251E /* AudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioEngine.h; sourceTree = "<group>"; };
+		F0C15F2029C8B08C0081251E /* AudioFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileReader.h; sourceTree = "<group>"; };
+		F0C15F2129C8B08C0081251E /* OutputAU.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OutputAU.hpp; sourceTree = "<group>"; };
+		F0C15F2229C8B08C0081251E /* AudioFileReader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioFileReader.mm; sourceTree = "<group>"; };
+		F0C15F2329C8B08C0081251E /* AUSMRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AUSMRenderer.mm; sourceTree = "<group>"; };
+		F0C15F2429C8B08C0081251E /* AUSMRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUSMRenderer.h; sourceTree = "<group>"; };
+		F0C15F2529C8B08C0081251E /* OutputAU.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OutputAU.mm; sourceTree = "<group>"; };
+		F0C15F2629C8B08C0081251E /* AudioEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioEngine.mm; sourceTree = "<group>"; };
+		F0C15F2729C8B08C0081251E /* AudioKernel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioKernel.h; sourceTree = "<group>"; };
+		F0C15F2829C8B08C0081251E /* SpatialAudioRenderer-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SpatialAudioRenderer-Bridging-Header.h"; sourceTree = "<group>"; };
+		F0C15F2A29C8B08C0081251E /* CoreAudioHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAudioHelpers.h; sourceTree = "<group>"; };
+		F0C15F2B29C8B08C0081251E /* AllocatedAudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllocatedAudioBufferList.h; sourceTree = "<group>"; };
+		F0C15F3C29C8B09A0081251E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F0C15F3F29C9F8E80081251E /* SpatialAudioRenderer.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = SpatialAudioRenderer.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		643D795F291EC6DF00910294 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				643D797F291EC74C00910294 /* CoreAudio.framework in Frameworks */,
+				643D797B291EC73400910294 /* AudioToolbox.framework in Frameworks */,
+				643D797D291EC73F00910294 /* AVFAudio.framework in Frameworks */,
+				64869E6029526303003BF623 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3939BA642422A1B7006E398A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64869E5F29526303003BF623 /* IOKit.framework */,
+				643D797E291EC74C00910294 /* CoreAudio.framework */,
+				643D797C291EC73F00910294 /* AVFAudio.framework */,
+				643D797A291EC73400910294 /* AudioToolbox.framework */,
+				39B22CF92423A5E700C160C8 /* CoreAudio.component */,
+				39B22CF62423A40100C160C8 /* libEmbeddedSystemAUs.dylib */,
+				3939BA772422ACAF006E398A /* libEmbeddedSystemAUs.dylib */,
+				3939BA692422A1BF006E398A /* AudioToolbox.framework */,
+				3939BA652422A1B7006E398A /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AE923EAF9A560BE08E2A7CD /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				3805AD9FABC232CD8FC1EBB3 /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+		A2DE2DCC241AB7FA00F5B9A4 = {
+			isa = PBXGroup;
+			children = (
+				F0C15F3C29C8B09A0081251E /* README.md */,
+				F0C15F1029C8B08C0081251E /* SpatialAudioRenderer */,
+				A2DE2DD6241AB7FA00F5B9A4 /* Products */,
+				3939BA642422A1B7006E398A /* Frameworks */,
+				E94877FECDA35DFE3F6587C4 /* Configuration */,
+				9AE923EAF9A560BE08E2A7CD /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		A2DE2DD6241AB7FA00F5B9A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				643D7962291EC6DF00910294 /* SpatialAudioRenderer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E94877FECDA35DFE3F6587C4 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				330D5DA1C4B17FC56E2BD60C /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		F0C15F1029C8B08C0081251E /* SpatialAudioRenderer */ = {
+			isa = PBXGroup;
+			children = (
+				F0C15F1529C8B08C0081251E /* SpatialAudioRendererApp.swift */,
+				F0C15F1629C8B08C0081251E /* Shared */,
+				F0C15F3E29C9F71E0081251E /* Supporting Files */,
+			);
+			path = SpatialAudioRenderer;
+			sourceTree = "<group>";
+		};
+		F0C15F1629C8B08C0081251E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F0C15F1729C8B08C0081251E /* UI */,
+				F0C15F1D29C8B08C0081251E /* Audio Engine */,
+				F0C15F2829C8B08C0081251E /* SpatialAudioRenderer-Bridging-Header.h */,
+				F0C15F2929C8B08C0081251E /* Helpers */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F0C15F1729C8B08C0081251E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F0C15F1829C8B08C0081251E /* Models */,
+				F0C15F1A29C8B08C0081251E /* ChainView.swift */,
+				F0C15F1B29C8B08C0081251E /* ContentView.swift */,
+				F0C15F1C29C8B08C0081251E /* Arrow.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F0C15F1829C8B08C0081251E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0C15F1929C8B08C0081251E /* ChainViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F0C15F1D29C8B08C0081251E /* Audio Engine */ = {
+			isa = PBXGroup;
+			children = (
+				F0C15F1E29C8B08C0081251E /* AudioEngine.h */,
+				F0C15F2629C8B08C0081251E /* AudioEngine.mm */,
+				F0C15F2729C8B08C0081251E /* AudioKernel.h */,
+				F0C15F1F29C8B08C0081251E /* Nodes */,
+			);
+			path = "Audio Engine";
+			sourceTree = "<group>";
+		};
+		F0C15F1F29C8B08C0081251E /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				F0C15F2029C8B08C0081251E /* AudioFileReader.h */,
+				F0C15F2229C8B08C0081251E /* AudioFileReader.mm */,
+				F0C15F2129C8B08C0081251E /* OutputAU.hpp */,
+				F0C15F2529C8B08C0081251E /* OutputAU.mm */,
+				F0C15F2329C8B08C0081251E /* AUSMRenderer.mm */,
+				F0C15F2429C8B08C0081251E /* AUSMRenderer.h */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		F0C15F2929C8B08C0081251E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F0C15F2A29C8B08C0081251E /* CoreAudioHelpers.h */,
+				F0C15F2B29C8B08C0081251E /* AllocatedAudioBufferList.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F0C15F3E29C9F71E0081251E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				648C56E529E7655300EC86B2 /* named_channels.wav */,
+				F0C15F1229C8B08C0081251E /* game.wav */,
+				F0C15F1329C8B08C0081251E /* voice.wav */,
+				F0C15F1429C8B08C0081251E /* Assets.xcassets */,
+				F0C15F3F29C9F8E80081251E /* SpatialAudioRenderer.entitlements */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		643D7961291EC6DF00910294 /* SpatialAudioRenderer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 643D796E291EC6E000910294 /* Build configuration list for PBXNativeTarget "SpatialAudioRenderer" */;
+			buildPhases = (
+				643D795E291EC6DF00910294 /* Sources */,
+				643D795F291EC6DF00910294 /* Frameworks */,
+				643D7960291EC6DF00910294 /* Resources */,
+				64F7DB8C29956361004560AD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpatialAudioRenderer;
+			productName = AUSMDownmixer;
+			productReference = 643D7962291EC6DF00910294 /* SpatialAudioRenderer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2DE2DCD241AB7FA00F5B9A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1430;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					643D7961291EC6DF00910294 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+				};
+			};
+			buildConfigurationList = A2DE2DD0241AB7FA00F5B9A4 /* Build configuration list for PBXProject "SpatialAudioRenderer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2DE2DCC241AB7FA00F5B9A4;
+			productRefGroup = A2DE2DD6241AB7FA00F5B9A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				643D7961291EC6DF00910294 /* SpatialAudioRenderer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		643D7960291EC6DF00910294 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0C15F3D29C8B09A0081251E /* README.md in Resources */,
+				F0C15F4029C9FD230081251E /* game.wav in Resources */,
+				648C56E629E7655300EC86B2 /* named_channels.wav in Resources */,
+				F0C15F4129C9FD260081251E /* voice.wav in Resources */,
+				F0C15F3129C8B08C0081251E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		643D795E291EC6DF00910294 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0C15F3429C8B08C0081251E /* ChainView.swift in Sources */,
+				F0C15F3729C8B08C0081251E /* AudioFileReader.mm in Sources */,
+				F0C15F3829C8B08C0081251E /* AUSMRenderer.mm in Sources */,
+				F0C15F3229C8B08C0081251E /* SpatialAudioRendererApp.swift in Sources */,
+				F0C15F3329C8B08C0081251E /* ChainViewModel.swift in Sources */,
+				F0C15F3529C8B08C0081251E /* ContentView.swift in Sources */,
+				F0C15F3629C8B08C0081251E /* Arrow.swift in Sources */,
+				F0C15F3929C8B08C0081251E /* OutputAU.mm in Sources */,
+				F0C15F3A29C8B08C0081251E /* AudioEngine.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		643D796F291EC6E000910294 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 330D5DA1C4B17FC56E2BD60C /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SpatialAudioRenderer/Supporting Files\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.spatial-audio-renderer${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SpatialAudioRenderer/Shared/SpatialAudioRenderer-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		643D7970291EC6E000910294 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 330D5DA1C4B17FC56E2BD60C /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SpatialAudioRenderer/Supporting Files\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.spatial-audio-renderer${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SpatialAudioRenderer/Shared/SpatialAudioRenderer-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A2DE2DE6241AB7FD00F5B9A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 330D5DA1C4B17FC56E2BD60C /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "SpatialAudioRenderer/Supporting Files/SpatialAudioRenderer.entitlements";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "SpatialAudioRenderer/Shared/SpatialAudioRenderer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A2DE2DE7241AB7FD00F5B9A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 330D5DA1C4B17FC56E2BD60C /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "SpatialAudioRenderer/Supporting Files/SpatialAudioRenderer.entitlements";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "SpatialAudioRenderer/Shared/SpatialAudioRenderer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		643D796E291EC6E000910294 /* Build configuration list for PBXNativeTarget "SpatialAudioRenderer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				643D796F291EC6E000910294 /* Debug */,
+				643D7970291EC6E000910294 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2DE2DD0241AB7FA00F5B9A4 /* Build configuration list for PBXProject "SpatialAudioRenderer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2DE2DE6241AB7FD00F5B9A4 /* Debug */,
+				A2DE2DE7241AB7FD00F5B9A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2DE2DCD241AB7FA00F5B9A4 /* Project object */;
+}

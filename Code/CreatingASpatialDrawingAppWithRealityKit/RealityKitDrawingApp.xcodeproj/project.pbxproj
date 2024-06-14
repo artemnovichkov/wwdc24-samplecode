@@ -1,0 +1,699 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		119759552BC8BFAF006329D8 /* PaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119759542BC8BE7C006329D8 /* PaletteView.swift */; };
+		119759572BC8C36D006329D8 /* BrushState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119759562BC8C36D006329D8 /* BrushState.swift */; };
+		3A0BFF762BE22A1E00BF194C /* MetalUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0BFF742BE22A1E00BF194C /* MetalUtilities.swift */; };
+		3A0BFF772BE22AEA00BF194C /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0BFF722BE2264D00BF194C /* SplashScreenView.swift */; };
+		3A0BFF792BE22F4A00BF194C /* SplashScreenBackground.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3A0BFF782BE22F4A00BF194C /* SplashScreenBackground.metal */; };
+		3A1CC9862AF3AB1C00114585 /* SmoothCurveSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1CC9852AF3AB1C00114585 /* SmoothCurveSampler.swift */; };
+		3A357C942BF1C6F30067B0CB /* SparkleBrushComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A357C932BF1C64A0067B0CB /* SparkleBrushComponent.swift */; };
+		3A3979172AF0506F00CF11C4 /* AnchorEntityInputProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3979162AF0506F00CF11C4 /* AnchorEntityInputProvider.swift */; };
+		3A4AEF042BDB7BA8005534FE /* SolidBrushComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AEF022BDB7BA8005534FE /* SolidBrushComponent.swift */; };
+		3A4AEF752BDCD355005534FE /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4AEF742BDCD355005534FE /* Algorithms */; };
+		3A4AEF792BDDBDDF005534FE /* DrawingSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AEF782BDDBDDF005534FE /* DrawingSource.swift */; };
+		3A4AEF7B2BDDBF0C005534FE /* CurveSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AEF7A2BDDBF0C005534FE /* CurveSample.swift */; };
+		3A4AEF7E2BDDC2CC005534FE /* BrushTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AEF7D2BDDC2CC005534FE /* BrushTypeView.swift */; };
+		3A4AEF802BDDC301005534FE /* PresetBrushView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AEF7F2BDDC301005534FE /* PresetBrushView.swift */; };
+		3A5192C02C00376D00EF1D14 /* SolidDrawingMeshGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5192BF2C00374600EF1D14 /* SolidDrawingMeshGenerator.swift */; };
+		3A5192C42C003C7C00EF1D14 /* SparkleBrushVertex+LowLevelMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5192C32C003C7700EF1D14 /* SparkleBrushVertex+LowLevelMesh.swift */; };
+		3A5192C62C003C9F00EF1D14 /* SolidBrushVertex+LowLevelMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5192C52C003C9900EF1D14 /* SolidBrushVertex+LowLevelMesh.swift */; };
+		3A5846792AD362E900EB71C4 /* CurveExtruder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5846782AD362E900EB71C4 /* CurveExtruder.swift */; };
+		3A58467B2AD3631D00EB71C4 /* CurveExtruderWithEndcaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58467A2AD3631D00EB71C4 /* CurveExtruderWithEndcaps.swift */; };
+		3A5BF7452BE6F3C6000A6CA1 /* DrawingCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA7EB032BE6EC590041F9AF /* DrawingCanvas.swift */; };
+		3A5DD98E2AC8C34E00C1176A /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 3A5DD98D2AC8C34E00C1176A /* RealityKitContent */; };
+		3A6323C72BE0C61D00D82EC6 /* SparkleBrushSimulation.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3AB8C7D22BE0C5A200D7EF6A /* SparkleBrushSimulation.metal */; };
+		3A71E0B12BCD0688002F38AC /* SolidBrushCurvePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8A1A432BCCE61C0007F33F /* SolidBrushCurvePoint.swift */; };
+		3A71E0B32BCD09C2002F38AC /* SolidBrushStyleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8A1A422BCCE5F80007F33F /* SolidBrushStyleProvider.swift */; };
+		3A7686E32AB263DA00762DDF /* RealityKitDrawingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7686E22AB263DA00762DDF /* RealityKitDrawingApp.swift */; };
+		3A7686E72AB263DC00762DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A7686E62AB263DC00762DDF /* Assets.xcassets */; };
+		3A7686EA2AB263DC00762DDF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A7686E92AB263DC00762DDF /* Preview Assets.xcassets */; };
+		3A7B00552BCB51A50068302D /* CurveProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B00532BCB51A50068302D /* CurveProcessing.swift */; };
+		3A9A17E62BD21F6C00FEF07D /* DrawingDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A17E52BD21F6C00FEF07D /* DrawingDocument.swift */; };
+		3A9A17EA2BD23F4F00FEF07D /* PresetBrushStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A17E92BD23F4F00FEF07D /* PresetBrushStroke.swift */; };
+		3AB4781D2BFA753F00C5E9C4 /* SparkleBrushStyleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB4781B2BFA6DC400C5E9C4 /* SparkleBrushStyleProvider.swift */; };
+		3AB4781E2BFA755100C5E9C4 /* SparkleBrushCurvePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB4781C2BFA6DF500C5E9C4 /* SparkleBrushCurvePoint.swift */; };
+		3AB6DB4D2BF3D2AC00DE837B /* SparkleDrawingMeshGenerator+Simulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6DB4C2BF3D27C00DE837B /* SparkleDrawingMeshGenerator+Simulation.swift */; };
+		3AB6DB4F2BF3F38300DE837B /* SparkleDrawingMeshGenerator+LowLevelMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB6DB4E2BF3F37000DE837B /* SparkleDrawingMeshGenerator+LowLevelMesh.swift */; };
+		3AB8C7652BE04AD500D7EF6A /* SparkleDrawingMeshGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AEF842BDE19D5005534FE /* SparkleDrawingMeshGenerator.swift */; };
+		3AD88C452BC896D50032AA03 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD88C442BC896D50032AA03 /* Collections */; };
+		3ADB78A02AB2ECCF000BD147 /* DrawingMeshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB789F2AB2ECCF000BD147 /* DrawingMeshView.swift */; };
+		3ADB78A22AB3026E000BD147 /* MathUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB78A12AB3026E000BD147 /* MathUtilities.swift */; };
+		3AECFF2A2C004C4000176926 /* SplashScreenBackgroundComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECFF292C004C3800176926 /* SplashScreenBackgroundComponent.swift */; };
+		3AECFF2C2C004C7D00176926 /* SplashScreenBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECFF2B2C004C7800176926 /* SplashScreenBackgroundView.swift */; };
+		3AECFF2E2C004CAF00176926 /* SplashScreenForeground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECFF2D2C004CAA00176926 /* SplashScreenForeground.swift */; };
+		3AECFF302C006F1B00176926 /* DrawingCanvasConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECFF2F2C006F1700176926 /* DrawingCanvasConfigurationView.swift */; };
+		3AECFF322C006F5C00176926 /* DrawingCanvasPlacementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECFF312C006F5100176926 /* DrawingCanvasPlacementView.swift */; };
+		3AECFF342C00709600176926 /* DrawingCanvasVisualizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AECFF332C00709100176926 /* DrawingCanvasVisualizationView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		119759542BC8BE7C006329D8 /* PaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteView.swift; sourceTree = "<group>"; };
+		119759562BC8C36D006329D8 /* BrushState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushState.swift; sourceTree = "<group>"; };
+		3A0BFF722BE2264D00BF194C /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		3A0BFF742BE22A1E00BF194C /* MetalUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalUtilities.swift; sourceTree = "<group>"; };
+		3A0BFF782BE22F4A00BF194C /* SplashScreenBackground.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SplashScreenBackground.metal; sourceTree = "<group>"; };
+		3A1CC9852AF3AB1C00114585 /* SmoothCurveSampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothCurveSampler.swift; sourceTree = "<group>"; };
+		3A357C932BF1C64A0067B0CB /* SparkleBrushComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkleBrushComponent.swift; sourceTree = "<group>"; };
+		3A3979162AF0506F00CF11C4 /* AnchorEntityInputProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorEntityInputProvider.swift; sourceTree = "<group>"; };
+		3A4AEF022BDB7BA8005534FE /* SolidBrushComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidBrushComponent.swift; sourceTree = "<group>"; };
+		3A4AEF782BDDBDDF005534FE /* DrawingSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingSource.swift; sourceTree = "<group>"; };
+		3A4AEF7A2BDDBF0C005534FE /* CurveSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveSample.swift; sourceTree = "<group>"; };
+		3A4AEF7D2BDDC2CC005534FE /* BrushTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushTypeView.swift; sourceTree = "<group>"; };
+		3A4AEF7F2BDDC301005534FE /* PresetBrushView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetBrushView.swift; sourceTree = "<group>"; };
+		3A4AEF842BDE19D5005534FE /* SparkleDrawingMeshGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkleDrawingMeshGenerator.swift; sourceTree = "<group>"; };
+		3A5192BF2C00374600EF1D14 /* SolidDrawingMeshGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidDrawingMeshGenerator.swift; sourceTree = "<group>"; };
+		3A5192C32C003C7700EF1D14 /* SparkleBrushVertex+LowLevelMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SparkleBrushVertex+LowLevelMesh.swift"; sourceTree = "<group>"; };
+		3A5192C52C003C9900EF1D14 /* SolidBrushVertex+LowLevelMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SolidBrushVertex+LowLevelMesh.swift"; sourceTree = "<group>"; };
+		3A5846782AD362E900EB71C4 /* CurveExtruder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveExtruder.swift; sourceTree = "<group>"; };
+		3A58467A2AD3631D00EB71C4 /* CurveExtruderWithEndcaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveExtruderWithEndcaps.swift; sourceTree = "<group>"; };
+		3A7686DB2AB263DA00762DDF /* RealityKitDrawingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealityKitDrawingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A7686DF2AB263DA00762DDF /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		3A7686E22AB263DA00762DDF /* RealityKitDrawingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityKitDrawingApp.swift; sourceTree = "<group>"; };
+		3A7686E62AB263DC00762DDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A7686E92AB263DC00762DDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3A7686EB2AB263DC00762DDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A7B00532BCB51A50068302D /* CurveProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveProcessing.swift; sourceTree = "<group>"; };
+		3A8A1A422BCCE5F80007F33F /* SolidBrushStyleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidBrushStyleProvider.swift; sourceTree = "<group>"; };
+		3A8A1A432BCCE61C0007F33F /* SolidBrushCurvePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidBrushCurvePoint.swift; sourceTree = "<group>"; };
+		3A958F502BFFAC3800D2BF2D /* MetalPacking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalPacking.h; sourceTree = "<group>"; };
+		3A9A17E52BD21F6C00FEF07D /* DrawingDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingDocument.swift; sourceTree = "<group>"; };
+		3A9A17E92BD23F4F00FEF07D /* PresetBrushStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetBrushStroke.swift; sourceTree = "<group>"; };
+		3AA7EB032BE6EC590041F9AF /* DrawingCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCanvas.swift; sourceTree = "<group>"; };
+		3AB4781B2BFA6DC400C5E9C4 /* SparkleBrushStyleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkleBrushStyleProvider.swift; sourceTree = "<group>"; };
+		3AB4781C2BFA6DF500C5E9C4 /* SparkleBrushCurvePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkleBrushCurvePoint.swift; sourceTree = "<group>"; };
+		3AB6DB4C2BF3D27C00DE837B /* SparkleDrawingMeshGenerator+Simulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SparkleDrawingMeshGenerator+Simulation.swift"; sourceTree = "<group>"; };
+		3AB6DB4E2BF3F37000DE837B /* SparkleDrawingMeshGenerator+LowLevelMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SparkleDrawingMeshGenerator+LowLevelMesh.swift"; sourceTree = "<group>"; };
+		3AB8C7642BDF5BF600D7EF6A /* SparkleBrushVertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparkleBrushVertex.h; sourceTree = "<group>"; };
+		3AB8C7D22BE0C5A200D7EF6A /* SparkleBrushSimulation.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SparkleBrushSimulation.metal; sourceTree = "<group>"; };
+		3ADB789F2AB2ECCF000BD147 /* DrawingMeshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingMeshView.swift; sourceTree = "<group>"; };
+		3ADB78A12AB3026E000BD147 /* MathUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathUtilities.swift; sourceTree = "<group>"; };
+		3ADB78A32AB3A769000BD147 /* SolidBrushVertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SolidBrushVertex.h; sourceTree = "<group>"; };
+		3ADB78A42AB3A8BB000BD147 /* RealityKitDrawingApp_BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealityKitDrawingApp_BridgingHeader.h; sourceTree = "<group>"; };
+		3AECFF292C004C3800176926 /* SplashScreenBackgroundComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenBackgroundComponent.swift; sourceTree = "<group>"; };
+		3AECFF2B2C004C7800176926 /* SplashScreenBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenBackgroundView.swift; sourceTree = "<group>"; };
+		3AECFF2D2C004CAA00176926 /* SplashScreenForeground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenForeground.swift; sourceTree = "<group>"; };
+		3AECFF2F2C006F1700176926 /* DrawingCanvasConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCanvasConfigurationView.swift; sourceTree = "<group>"; };
+		3AECFF312C006F5100176926 /* DrawingCanvasPlacementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCanvasPlacementView.swift; sourceTree = "<group>"; };
+		3AECFF332C00709100176926 /* DrawingCanvasVisualizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCanvasVisualizationView.swift; sourceTree = "<group>"; };
+		3AFFD30E2BF176F000935A95 /* DistanceFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DistanceFunctions.h; sourceTree = "<group>"; };
+		5CBA090E1E44C6C2095B2B2A /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		8A319A4AB7527C79477470F5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CE6D6D139AF68682151B497F /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A7686D82AB263DA00762DDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4AEF752BDCD355005534FE /* Algorithms in Frameworks */,
+				3AD88C452BC896D50032AA03 /* Collections in Frameworks */,
+				3A5DD98E2AC8C34E00C1176A /* RealityKitContent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		119759532BC8BE74006329D8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3A4AEF812BDDC32E005534FE /* Palette */,
+				119759562BC8C36D006329D8 /* BrushState.swift */,
+				3ADB789F2AB2ECCF000BD147 /* DrawingMeshView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3A0BFF712BE223C300BF194C /* Splash Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3AECFF2D2C004CAA00176926 /* SplashScreenForeground.swift */,
+				3AECFF2B2C004C7800176926 /* SplashScreenBackgroundView.swift */,
+				3AECFF292C004C3800176926 /* SplashScreenBackgroundComponent.swift */,
+				3A0BFF722BE2264D00BF194C /* SplashScreenView.swift */,
+				3AFFD30E2BF176F000935A95 /* DistanceFunctions.h */,
+				3A0BFF782BE22F4A00BF194C /* SplashScreenBackground.metal */,
+			);
+			path = "Splash Screen";
+			sourceTree = "<group>";
+		};
+		3A0BFF732BE22A0100BF194C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3A958F502BFFAC3800D2BF2D /* MetalPacking.h */,
+				3A7B00532BCB51A50068302D /* CurveProcessing.swift */,
+				3A0BFF742BE22A1E00BF194C /* MetalUtilities.swift */,
+				3ADB78A12AB3026E000BD147 /* MathUtilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3A4AEF812BDDC32E005534FE /* Palette */ = {
+			isa = PBXGroup;
+			children = (
+				3A4AEF822BDDC33C005534FE /* Presets */,
+				3A4AEF7D2BDDC2CC005534FE /* BrushTypeView.swift */,
+				119759542BC8BE7C006329D8 /* PaletteView.swift */,
+			);
+			path = Palette;
+			sourceTree = "<group>";
+		};
+		3A4AEF822BDDC33C005534FE /* Presets */ = {
+			isa = PBXGroup;
+			children = (
+				3A9A17E92BD23F4F00FEF07D /* PresetBrushStroke.swift */,
+				3A4AEF7F2BDDC301005534FE /* PresetBrushView.swift */,
+			);
+			path = Presets;
+			sourceTree = "<group>";
+		};
+		3A4AEF832BDE19CC005534FE /* Sparkle */ = {
+			isa = PBXGroup;
+			children = (
+				3AB4781A2BFA6DBF00C5E9C4 /* Style */,
+				3A4AEF842BDE19D5005534FE /* SparkleDrawingMeshGenerator.swift */,
+				3AB6DB4E2BF3F37000DE837B /* SparkleDrawingMeshGenerator+LowLevelMesh.swift */,
+				3AB6DB4C2BF3D27C00DE837B /* SparkleDrawingMeshGenerator+Simulation.swift */,
+				3AB8C7D22BE0C5A200D7EF6A /* SparkleBrushSimulation.metal */,
+				3AB8C7642BDF5BF600D7EF6A /* SparkleBrushVertex.h */,
+				3A5192C32C003C7700EF1D14 /* SparkleBrushVertex+LowLevelMesh.swift */,
+				3A357C932BF1C64A0067B0CB /* SparkleBrushComponent.swift */,
+			);
+			path = Sparkle;
+			sourceTree = "<group>";
+		};
+		3A7686D22AB263DA00762DDF = {
+			isa = PBXGroup;
+			children = (
+				8A319A4AB7527C79477470F5 /* README.md */,
+				3A7686DD2AB263DA00762DDF /* RealityKitDrawingApp */,
+				3A7686DE2AB263DA00762DDF /* Packages */,
+				3A7686DC2AB263DA00762DDF /* Products */,
+				69429742D829035C8A119720 /* Configuration */,
+				863C3AA37ABE4C1E22073B90 /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		3A7686DC2AB263DA00762DDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A7686DB2AB263DA00762DDF /* RealityKitDrawingApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A7686DD2AB263DA00762DDF /* RealityKitDrawingApp */ = {
+			isa = PBXGroup;
+			children = (
+				3AA7EB022BE6EA6B0041F9AF /* Canvas */,
+				3A0BFF712BE223C300BF194C /* Splash Screen */,
+				3A9A17E42BD21F6200FEF07D /* Document */,
+				119759532BC8BE74006329D8 /* UI */,
+				3A8A1A412BCCE54D0007F33F /* Brushes */,
+				3A0BFF732BE22A0100BF194C /* Utilities */,
+				3A7686E22AB263DA00762DDF /* RealityKitDrawingApp.swift */,
+				3ADB78A42AB3A8BB000BD147 /* RealityKitDrawingApp_BridgingHeader.h */,
+				3A7686E62AB263DC00762DDF /* Assets.xcassets */,
+				3A7686EB2AB263DC00762DDF /* Info.plist */,
+				3A7686E82AB263DC00762DDF /* Preview Content */,
+			);
+			path = RealityKitDrawingApp;
+			sourceTree = "<group>";
+		};
+		3A7686DE2AB263DA00762DDF /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				3A7686DF2AB263DA00762DDF /* RealityKitContent */,
+			);
+			name = Packages;
+			path = RealityKitDrawingApp/Packages;
+			sourceTree = "<group>";
+		};
+		3A7686E82AB263DC00762DDF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3A7686E92AB263DC00762DDF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3A8A1A402BCCE52E0007F33F /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				3A8A1A432BCCE61C0007F33F /* SolidBrushCurvePoint.swift */,
+				3A8A1A422BCCE5F80007F33F /* SolidBrushStyleProvider.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		3A8A1A412BCCE54D0007F33F /* Brushes */ = {
+			isa = PBXGroup;
+			children = (
+				3A4AEF832BDE19CC005534FE /* Sparkle */,
+				3A9A185D2BD314B100FEF07D /* Solid */,
+			);
+			path = Brushes;
+			sourceTree = "<group>";
+		};
+		3A9A17E42BD21F6200FEF07D /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				3A9A17E52BD21F6C00FEF07D /* DrawingDocument.swift */,
+				3A4AEF782BDDBDDF005534FE /* DrawingSource.swift */,
+				3A3979162AF0506F00CF11C4 /* AnchorEntityInputProvider.swift */,
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
+		3A9A185D2BD314B100FEF07D /* Solid */ = {
+			isa = PBXGroup;
+			children = (
+				3A9A185E2BD314CD00FEF07D /* CurveProcessing */,
+				3A8A1A402BCCE52E0007F33F /* Style */,
+				3ADB78A32AB3A769000BD147 /* SolidBrushVertex.h */,
+				3A5192C52C003C9900EF1D14 /* SolidBrushVertex+LowLevelMesh.swift */,
+				3A4AEF022BDB7BA8005534FE /* SolidBrushComponent.swift */,
+				3A5192BF2C00374600EF1D14 /* SolidDrawingMeshGenerator.swift */,
+				3A5846782AD362E900EB71C4 /* CurveExtruder.swift */,
+				3A58467A2AD3631D00EB71C4 /* CurveExtruderWithEndcaps.swift */,
+			);
+			path = Solid;
+			sourceTree = "<group>";
+		};
+		3A9A185E2BD314CD00FEF07D /* CurveProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				3A4AEF7A2BDDBF0C005534FE /* CurveSample.swift */,
+				3A1CC9852AF3AB1C00114585 /* SmoothCurveSampler.swift */,
+			);
+			path = CurveProcessing;
+			sourceTree = "<group>";
+		};
+		3AA7EB022BE6EA6B0041F9AF /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				3AECFF332C00709100176926 /* DrawingCanvasVisualizationView.swift */,
+				3AECFF312C006F5100176926 /* DrawingCanvasPlacementView.swift */,
+				3AECFF2F2C006F1700176926 /* DrawingCanvasConfigurationView.swift */,
+				3AA7EB032BE6EC590041F9AF /* DrawingCanvas.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		3AB4781A2BFA6DBF00C5E9C4 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				3AB4781C2BFA6DF500C5E9C4 /* SparkleBrushCurvePoint.swift */,
+				3AB4781B2BFA6DC400C5E9C4 /* SparkleBrushStyleProvider.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		69429742D829035C8A119720 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				CE6D6D139AF68682151B497F /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		863C3AA37ABE4C1E22073B90 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				5CBA090E1E44C6C2095B2B2A /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A7686DA2AB263DA00762DDF /* RealityKitDrawingApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A7686F82AB263DC00762DDF /* Build configuration list for PBXNativeTarget "RealityKitDrawingApp" */;
+			buildPhases = (
+				3A7686D72AB263DA00762DDF /* Sources */,
+				3A7686D82AB263DA00762DDF /* Frameworks */,
+				3A7686D92AB263DA00762DDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RealityKitDrawingApp;
+			packageProductDependencies = (
+				3A5DD98D2AC8C34E00C1176A /* RealityKitContent */,
+				3AD88C442BC896D50032AA03 /* Collections */,
+				3A4AEF742BDCD355005534FE /* Algorithms */,
+			);
+			productName = Flow;
+			productReference = 3A7686DB2AB263DA00762DDF /* RealityKitDrawingApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A7686D32AB263DA00762DDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1600;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					3A7686DA2AB263DA00762DDF = {
+						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
+					};
+				};
+			};
+			buildConfigurationList = 3A7686D62AB263DA00762DDF /* Build configuration list for PBXProject "RealityKitDrawingApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A7686D22AB263DA00762DDF;
+			packageReferences = (
+				3AD97CE52BC8710100320DA2 /* XCRemoteSwiftPackageReference "swift-collections" */,
+				3A4AEF732BDCD332005534FE /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
+			productRefGroup = 3A7686DC2AB263DA00762DDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A7686DA2AB263DA00762DDF /* RealityKitDrawingApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A7686D92AB263DA00762DDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A7686EA2AB263DC00762DDF /* Preview Assets.xcassets in Resources */,
+				3A7686E72AB263DC00762DDF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A7686D72AB263DA00762DDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A0BFF772BE22AEA00BF194C /* SplashScreenView.swift in Sources */,
+				3A9A17EA2BD23F4F00FEF07D /* PresetBrushStroke.swift in Sources */,
+				3A1CC9862AF3AB1C00114585 /* SmoothCurveSampler.swift in Sources */,
+				3ADB78A22AB3026E000BD147 /* MathUtilities.swift in Sources */,
+				3ADB78A02AB2ECCF000BD147 /* DrawingMeshView.swift in Sources */,
+				3AB6DB4F2BF3F38300DE837B /* SparkleDrawingMeshGenerator+LowLevelMesh.swift in Sources */,
+				3A58467B2AD3631D00EB71C4 /* CurveExtruderWithEndcaps.swift in Sources */,
+				3A4AEF7E2BDDC2CC005534FE /* BrushTypeView.swift in Sources */,
+				3A4AEF7B2BDDBF0C005534FE /* CurveSample.swift in Sources */,
+				3A0BFF792BE22F4A00BF194C /* SplashScreenBackground.metal in Sources */,
+				3AB4781D2BFA753F00C5E9C4 /* SparkleBrushStyleProvider.swift in Sources */,
+				3A4AEF802BDDC301005534FE /* PresetBrushView.swift in Sources */,
+				3A9A17E62BD21F6C00FEF07D /* DrawingDocument.swift in Sources */,
+				3A7686E32AB263DA00762DDF /* RealityKitDrawingApp.swift in Sources */,
+				3A5192C02C00376D00EF1D14 /* SolidDrawingMeshGenerator.swift in Sources */,
+				3A71E0B12BCD0688002F38AC /* SolidBrushCurvePoint.swift in Sources */,
+				3A5192C42C003C7C00EF1D14 /* SparkleBrushVertex+LowLevelMesh.swift in Sources */,
+				3A3979172AF0506F00CF11C4 /* AnchorEntityInputProvider.swift in Sources */,
+				3A4AEF042BDB7BA8005534FE /* SolidBrushComponent.swift in Sources */,
+				3A4AEF792BDDBDDF005534FE /* DrawingSource.swift in Sources */,
+				3AECFF2C2C004C7D00176926 /* SplashScreenBackgroundView.swift in Sources */,
+				119759572BC8C36D006329D8 /* BrushState.swift in Sources */,
+				3AB6DB4D2BF3D2AC00DE837B /* SparkleDrawingMeshGenerator+Simulation.swift in Sources */,
+				3A357C942BF1C6F30067B0CB /* SparkleBrushComponent.swift in Sources */,
+				3AECFF302C006F1B00176926 /* DrawingCanvasConfigurationView.swift in Sources */,
+				3A7B00552BCB51A50068302D /* CurveProcessing.swift in Sources */,
+				3A0BFF762BE22A1E00BF194C /* MetalUtilities.swift in Sources */,
+				119759552BC8BFAF006329D8 /* PaletteView.swift in Sources */,
+				3AECFF342C00709600176926 /* DrawingCanvasVisualizationView.swift in Sources */,
+				3A5846792AD362E900EB71C4 /* CurveExtruder.swift in Sources */,
+				3A5BF7452BE6F3C6000A6CA1 /* DrawingCanvas.swift in Sources */,
+				3AB4781E2BFA755100C5E9C4 /* SparkleBrushCurvePoint.swift in Sources */,
+				3A6323C72BE0C61D00D82EC6 /* SparkleBrushSimulation.metal in Sources */,
+				3AECFF322C006F5C00176926 /* DrawingCanvasPlacementView.swift in Sources */,
+				3AECFF2A2C004C4000176926 /* SplashScreenBackgroundComponent.swift in Sources */,
+				3AB8C7652BE04AD500D7EF6A /* SparkleDrawingMeshGenerator.swift in Sources */,
+				3AECFF2E2C004CAF00176926 /* SplashScreenForeground.swift in Sources */,
+				3A5192C62C003C9F00EF1D14 /* SolidBrushVertex+LowLevelMesh.swift in Sources */,
+				3A71E0B32BCD09C2002F38AC /* SolidBrushStyleProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3A7686F62AB263DC00762DDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE6D6D139AF68682151B497F /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RealityKitDrawingApp/RealityKitDrawingApp_BridgingHeader.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3A7686F72AB263DC00762DDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE6D6D139AF68682151B497F /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RealityKitDrawingApp/RealityKitDrawingApp_BridgingHeader.h";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A7686F92AB263DC00762DDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE6D6D139AF68682151B497F /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RealityKitDrawingApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.RealityKitDrawingApp${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		3A7686FA2AB263DC00762DDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE6D6D139AF68682151B497F /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RealityKitDrawingApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.RealityKitDrawingApp${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A7686D62AB263DA00762DDF /* Build configuration list for PBXProject "RealityKitDrawingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A7686F62AB263DC00762DDF /* Debug */,
+				3A7686F72AB263DC00762DDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A7686F82AB263DC00762DDF /* Build configuration list for PBXNativeTarget "RealityKitDrawingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A7686F92AB263DC00762DDF /* Debug */,
+				3A7686FA2AB263DC00762DDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A4AEF732BDCD332005534FE /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		3AD97CE52BC8710100320DA2 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A4AEF742BDCD355005534FE /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A4AEF732BDCD332005534FE /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+		3A5DD98D2AC8C34E00C1176A /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+		3AD88C442BC896D50032AA03 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AD97CE52BC8710100320DA2 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3A7686D32AB263DA00762DDF /* Project object */;
+}

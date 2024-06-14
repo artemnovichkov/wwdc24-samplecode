@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23076" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tKE-kJ-rNl">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23068"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="RCP-6B-3He">
+            <objects>
+                <viewController id="JXf-sL-mQs" customClass="SidebarViewController" customModule="PointsOfInterest_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RMr-Ah-Vke">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vTO-dd-UXb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="moU-mM-uwN">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Show Map" image="map" catalog="system" id="eR5-Nx-nir">
+                                <connections>
+                                    <action selector="showMap:" destination="JXf-sL-mQs" id="NEE-Jb-xpq"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Settings" id="jMw-Xd-s9A">
+                                <imageReference key="image" image="gearshape" catalog="system" symbolScale="default"/>
+                                <connections>
+                                    <segue destination="w4Y-SX-cza" kind="popoverPresentation" destinationCreationSelector="showSettings:" popoverAnchorBarButtonItem="jMw-Xd-s9A" id="Hwc-u6-FsY">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="showMapButton" destination="eR5-Nx-nir" id="1yc-cK-2yS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ke0-Xn-BBm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="316" y="29"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="gGt-AG-AtQ">
+            <objects>
+                <hostingController id="w4Y-SX-cza" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zeo-jp-Dg6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1266" y="28"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="Eyo-cI-ccE">
+            <objects>
+                <splitViewController allowDoubleColumnStyle="YES" preferredDisplayMode="beside" primaryBackgroundStyle="sidebar" id="tKE-kJ-rNl" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="w26-b6-vmW" kind="relationship" relationship="masterViewController" id="UQV-KX-yg8"/>
+                        <segue destination="yhL-uq-NEf" kind="relationship" relationship="detailViewController" id="W39-c8-n81"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4an-m1-GPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1714" y="419"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="QNE-Ex-Wuc">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="w26-b6-vmW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="syS-Xt-fcH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vII-87-i5a">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JXf-sL-mQs" kind="relationship" relationship="rootViewController" id="a82-Mh-Po0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tjP-fV-2lm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450" y="30"/>
+        </scene>
+        <!--Explore-->
+        <scene sceneID="WgK-W8-fwD">
+            <objects>
+                <viewController id="Ej2-TV-AFh" customClass="MapViewController" customModule="PointsOfInterest_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PnD-DG-TPX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M8h-7M-e6c">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ej2-TV-AFh" id="1uF-x2-vyP"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GD9-O8-GFF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="M8h-7M-e6c" firstAttribute="top" secondItem="GD9-O8-GFF" secondAttribute="top" id="UrS-WL-drd"/>
+                            <constraint firstItem="M8h-7M-e6c" firstAttribute="trailing" secondItem="PnD-DG-TPX" secondAttribute="trailing" id="baT-IN-h9A"/>
+                            <constraint firstItem="M8h-7M-e6c" firstAttribute="bottom" secondItem="PnD-DG-TPX" secondAttribute="bottom" id="ddv-Xc-KnM"/>
+                            <constraint firstItem="M8h-7M-e6c" firstAttribute="leading" secondItem="PnD-DG-TPX" secondAttribute="leading" id="xyW-im-cMD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Explore" largeTitleDisplayMode="never" id="lC3-M5-CBj"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="M8h-7M-e6c" id="nbg-VC-98c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRQ-Hr-alR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="316" y="833"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="iTM-Ca-XQT">
+            <objects>
+                <navigationController id="yhL-uq-NEf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="EC9-lb-ToC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="OyC-sB-ynt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ej2-TV-AFh" kind="relationship" relationship="rootViewController" id="lhW-ao-Ggo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YfK-kk-jYt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450" y="833"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="map" catalog="system" width="128" height="112"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

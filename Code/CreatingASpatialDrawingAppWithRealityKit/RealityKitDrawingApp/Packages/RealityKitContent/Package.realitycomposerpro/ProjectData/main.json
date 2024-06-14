@@ -1,0 +1,10 @@
+{
+  "pathsToIds" : {
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/CanvasPlacementMaterial.usda" : "3E977517-2E82-4F60-AA0F-FD2F603BB644",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/NormalsMaterial.usda" : "F315EA85-528C-4A1B-8BDE-34323DE58F25",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/PresetBrushMaterial.usda" : "776FB750-0793-49B2-86C8-61EF7CEA20E4",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/SolidBrushMaterial.usda" : "F62CC7BB-A579-40DE-80CE-035133F3EF16",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/SparkleBrushMaterial.usda" : "F32015BB-2825-48EB-960E-1C1CBF4971E9",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/SplashScreenMaterial.usda" : "6274BD68-DF2D-488A-B81A-39F2E2889EB7"
+  }
+}

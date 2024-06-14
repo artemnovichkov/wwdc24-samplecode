@@ -1,0 +1,24 @@
+{
+  "pathsToIds" : {
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/GridMaterial.usda" : "95052448-183C-40B5-9E52-3717AF9B48FA",
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Immersive.usda" : "65F6F990-A780-4474-B78B-572E0E4E273D",
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Scene.usda" : "0A9B4653-B11E-4D6A-850E-C6FCB621626C",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/arch.usdc" : "8F163BC5-3AE3-4F44-95BA-2B3A1E3C24D3",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/green.usda" : "343927D5-3854-486E-A191-B678B6F37B48",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/green.usdc" : "83C67736-1D7C-430B-8BBC-451095E71022",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/green2.usda" : "D68C999E-E3B7-45E9-88B9-7C0A334A20DB",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/GridMaterial.usda" : "A21C1E11-ABB0-4972-8159-55AD3A9AA5B3",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Immersive.usda" : "1D572CEB-057A-41C3-B575-04C37501A3C0",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Materials\/GreenMaterial.usda" : "F420AF47-16E0-47D4-92D6-29383C22F3BD",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Materials\/GridMaterial.usda" : "05F35D70-0754-40DC-9D00-E296F76734EF",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Materials\/Untitled%20Scene.usda" : "F643EB68-ABFC-49C3-B5C0-E025A1E0917F",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/plane.usdc" : "8FE1993B-724E-4C90-856A-A7B81C76C309",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Scene.usda" : "D66134B1-3681-4A8E-AFE5-29F257229F3B",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/TallerArch1.usda" : "FA7C9D8E-B1C3-4B7C-B07F-204E268047C0",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Test.usdz" : "E64178CC-1085-44DD-BF10-80058E41A6AB",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/testArch2.usdc" : "1C9C0955-73F8-4837-93F7-77CEC1D5A1DF",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/testArchTaller.usdc" : "FF0982E1-5F11-4B51-B707-AAFD84747E26",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/yellow.usdc" : "4B8214E1-AEB8-4465-9BE7-9531A7437D19",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/yellowArch.usdc" : "FD093187-3D06-455C-906F-BB7F1A6C9E00"
+  }
+}

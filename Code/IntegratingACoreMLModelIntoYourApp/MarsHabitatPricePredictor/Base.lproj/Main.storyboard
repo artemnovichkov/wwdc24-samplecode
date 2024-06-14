@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16092.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="x5S-qA-b1W">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16082.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mars Habitat Price Predictor-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MarsHabitatPricePredictor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0M-4b-Rzs">
+                                <rect key="frame" x="0.0" y="37" width="375" height="160"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="njY-s1-pW5"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bRV-ou-eyM"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5QR-Uu-1U1"/>
+                                </connections>
+                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ese-Wv-28Y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="38"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="0Rq-mr-OTg"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solar Panels" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0m-0G-6r1">
+                                <rect key="frame" x="0.0" y="8" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greenhouses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyZ-DZ-OuD">
+                                <rect key="frame" x="125" y="8" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acres" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mi-eE-Sdm">
+                                <rect key="frame" x="250" y="8" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YeV-k7-BYC">
+                                <rect key="frame" x="0.0" y="197" width="375" height="466"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1,123,123.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSc-8r-bnY">
+                                        <rect key="frame" x="0.0" y="55" width="375" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="lSG-75-Sjk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Predicted Price (millions)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXq-xf-a9k">
+                                        <rect key="frame" x="0.0" y="16" width="375" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="W85-c2-GOk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="LSc-8r-bnY" firstAttribute="top" secondItem="aXq-xf-a9k" secondAttribute="bottom" constant="1" id="Ea3-my-TWg"/>
+                                    <constraint firstItem="LSc-8r-bnY" firstAttribute="leading" secondItem="YeV-k7-BYC" secondAttribute="leading" id="Sl9-KE-Tdq"/>
+                                    <constraint firstAttribute="trailing" secondItem="aXq-xf-a9k" secondAttribute="trailing" id="WSJ-OE-bG2"/>
+                                    <constraint firstItem="aXq-xf-a9k" firstAttribute="top" secondItem="YeV-k7-BYC" secondAttribute="top" constant="16" id="bXB-zu-KT5"/>
+                                    <constraint firstAttribute="trailing" secondItem="LSc-8r-bnY" secondAttribute="trailing" id="ggF-PW-Qy5"/>
+                                    <constraint firstItem="aXq-xf-a9k" firstAttribute="leading" secondItem="YeV-k7-BYC" secondAttribute="leading" id="jRo-TF-0A4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Mi-eE-Sdm" firstAttribute="leading" secondItem="vyZ-DZ-OuD" secondAttribute="trailing" id="0mc-Mw-Rxg"/>
+                            <constraint firstItem="Q0m-0G-6r1" firstAttribute="width" secondItem="vyZ-DZ-OuD" secondAttribute="width" id="1cY-6v-y6e"/>
+                            <constraint firstItem="YeV-k7-BYC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1wz-8C-9ll"/>
+                            <constraint firstItem="vyZ-DZ-OuD" firstAttribute="top" secondItem="0Mi-eE-Sdm" secondAttribute="top" id="38E-Zb-31V"/>
+                            <constraint firstItem="Ese-Wv-28Y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3L7-jz-1rb"/>
+                            <constraint firstItem="YeV-k7-BYC" firstAttribute="top" secondItem="I0M-4b-Rzs" secondAttribute="bottom" id="728-Ds-7GP"/>
+                            <constraint firstAttribute="trailing" secondItem="Ese-Wv-28Y" secondAttribute="trailing" id="Elb-UF-ZKG"/>
+                            <constraint firstItem="YeV-k7-BYC" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="40" id="Fcf-J1-umL"/>
+                            <constraint firstItem="vyZ-DZ-OuD" firstAttribute="leading" secondItem="Q0m-0G-6r1" secondAttribute="trailing" id="GqF-Sm-j6c"/>
+                            <constraint firstItem="Q0m-0G-6r1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KIn-em-6Lf"/>
+                            <constraint firstItem="Q0m-0G-6r1" firstAttribute="top" secondItem="vyZ-DZ-OuD" secondAttribute="top" id="W0q-ib-GsA"/>
+                            <constraint firstItem="vyZ-DZ-OuD" firstAttribute="width" secondItem="0Mi-eE-Sdm" secondAttribute="width" id="XWX-di-KcH"/>
+                            <constraint firstAttribute="trailing" secondItem="0Mi-eE-Sdm" secondAttribute="trailing" id="Xve-UW-NUg"/>
+                            <constraint firstItem="Ese-Wv-28Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cuX-ir-Wa2"/>
+                            <constraint firstItem="I0M-4b-Rzs" firstAttribute="top" secondItem="vyZ-DZ-OuD" secondAttribute="bottom" constant="8" id="rgP-bs-H3l"/>
+                            <constraint firstAttribute="trailing" secondItem="YeV-k7-BYC" secondAttribute="trailing" id="uZt-jA-lgE"/>
+                            <constraint firstItem="I0M-4b-Rzs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="upd-4d-cE7"/>
+                            <constraint firstAttribute="trailing" secondItem="I0M-4b-Rzs" secondAttribute="trailing" id="z7s-t1-XI8"/>
+                            <constraint firstItem="Q0m-0G-6r1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="8" id="z9v-uV-8Fx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mars Habitat Price Predictor" id="KHj-fv-Iud"/>
+                    <connections>
+                        <outlet property="pickerView" destination="I0M-4b-Rzs" id="D11-vg-eL4"/>
+                        <outlet property="priceLabel" destination="LSc-8r-bnY" id="SgP-8E-M2U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="129.98500749625188"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SOZ-dw-3G7">
+            <objects>
+                <navigationController id="x5S-qA-b1W" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="HMA-Ol-BeP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Q8U-DQ-ruW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vvH-Y3-Tz1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-647" y="130"/>
+        </scene>
+    </scenes>
+</document>

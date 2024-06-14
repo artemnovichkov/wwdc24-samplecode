@@ -1,0 +1,573 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0"
+    }
+    defaultPrim = "SolidPresetBrushMaterial"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root" (
+    active = true
+    references = None
+)
+{
+    reorder nameChildren = ["PresetBrushColor", "SparklePresetBrushMaterial", "SolidPresetBrushMaterial"]
+    quatf xformOp:orient = (1, 0, 0, 0)
+    float3 xformOp:scale = (1, 1, 1)
+    float3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def Material "SolidPresetBrushMaterial" (
+        references = None
+    )
+    {
+        reorder nameChildren = ["PBRSurface", "PresetBrushColor"]
+        token outputs:mtlx:surface.connect = </Root/SolidPresetBrushMaterial/PBRSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (34.13499, 409.2312)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 1949
+
+        def Shader "PBRSurface" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_realitykit_pbr_surfaceshader"
+            float inputs:ambientOcclusion
+            color3f inputs:baseColor.connect = </Root/SolidPresetBrushMaterial/PresetBrushColor.outputs:Multiply_out>
+            color3f inputs:emissiveColor
+            bool inputs:hasPremultipliedAlpha
+            float inputs:metallic.connect = </Root/SolidPresetBrushMaterial/Metallic.outputs:out>
+            float3 inputs:normal
+            float inputs:opacity
+            float inputs:opacityThreshold
+            float inputs:roughness.connect = </Root/SolidPresetBrushMaterial/Roughness.outputs:out>
+            float inputs:specular
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (-247.26343, 285.6043)
+            int ui:nodegraph:node:stackingOrder = 1984
+        }
+
+        def "PresetBrushColor" (
+            active = true
+            references = </Root/PresetBrushColor>
+        )
+        {
+            float2 ui:nodegraph:node:pos = (-548.6079, 159.09926)
+            int ui:nodegraph:node:stackingOrder = 2037
+        }
+
+        def Shader "Roughness" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_extract_vector4"
+            float4 inputs:in.connect = </Root/SolidPresetBrushMaterial/UV3.outputs:out>
+            int inputs:index
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-524.60156, 348.72656)
+            int ui:nodegraph:node:stackingOrder = 2030
+        }
+
+        def Shader "Metallic" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_extract_vector4"
+            float4 inputs:in.connect = </Root/SolidPresetBrushMaterial/UV3.outputs:out>
+            int inputs:index = 1
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-515.9375, 421.84375)
+            int ui:nodegraph:node:stackingOrder = 2033
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in"]
+        }
+
+        def Shader "UV3" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_texcoord_vector4"
+            int inputs:index = 3
+            float4 outputs:out
+            float2 ui:nodegraph:node:pos = (-722.3008, 382.26953)
+            int ui:nodegraph:node:stackingOrder = 2030
+        }
+
+        def Scope "Group" (
+            kind = "group"
+        )
+        {
+            string ui:group:annotation = "Use UV3 to extract material parameters"
+            string ui:group:annotationDescription = "Roughness is specified by the X coordinate and Metallic is specified by the Y coordinate"
+            string[] ui:group:members = ["p:Roughness", "p:UV3", "p:Metallic"]
+        }
+    }
+
+    def NodeGraph "PresetBrushColor" (
+        references = None
+    )
+    {
+        color3f outputs:Multiply_out.connect = </Root/PresetBrushColor/Multiply.outputs:out>
+        float2 ui:nodegraph:node:pos = (-544.0259, 164.07582)
+        int ui:nodegraph:node:stackingOrder = 1951
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1874.25, 98.07422)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 2512
+
+        def Shader "Subtract_1" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_subtract_float"
+            float inputs:in1.connect = </Root/PresetBrushColor/Remap.outputs:out>
+            float inputs:in2 = 0.5
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (953.3203, 212.63672)
+            int ui:nodegraph:node:stackingOrder = 2272
+        }
+
+        def Shader "Speed" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 0.3
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-83.71094, 53.726562)
+            int ui:nodegraph:node:stackingOrder = 2158
+        }
+
+        def Shader "GeomColor" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_geomcolor_color3"
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (1538.0703, 51.554688)
+            int ui:nodegraph:node:stackingOrder = 2508
+        }
+
+        def Shader "MixStrength" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg = (0.999996, 1, 1) (
+                colorSpace = "srgb_texture"
+            )
+            color3f inputs:fg = (0.999996, 1, 1) (
+                colorSpace = "srgb_texture"
+            )
+            color3f inputs:fg.connect = </Root/PresetBrushColor/MixColors.outputs:out>
+            float inputs:mix.connect = </Root/PresetBrushColor/Dot_2.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (1544.9766, 187.27734)
+            int ui:nodegraph:node:stackingOrder = 2294
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:fg", "inputs:bg", "inputs:bg", "inputs:bg"]
+        }
+
+        def Shader "Multiply_2" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_multiply_float"
+            float inputs:in1.connect = </Root/PresetBrushColor/HoverState.outputs:timeSinceHoverStart>
+            float inputs:in2.connect = </Root/PresetBrushColor/Speed.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (74.90234, -0.953125)
+            int ui:nodegraph:node:stackingOrder = 2158
+        }
+
+        def Shader "Remap" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_remap_float"
+            float inputs:in.connect = </Root/PresetBrushColor/Clamp_1.outputs:out>
+            float inputs:inhigh = 0.2
+            float inputs:inhigh.connect = </Root/PresetBrushColor/Range.outputs:out>
+            float inputs:inlow
+            float inputs:outhigh
+            float inputs:outlow
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (746.3711, 132.57031)
+            int ui:nodegraph:node:stackingOrder = 2424
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:outhigh"]
+        }
+
+        def Shader "Clamp_1" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_clamp_float"
+            float inputs:high.connect = </Root/PresetBrushColor/Range.outputs:out>
+            float inputs:in.connect = </Root/PresetBrushColor/Dot.outputs:out>
+            float inputs:low
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (601.0586, 7.3398438)
+            int ui:nodegraph:node:stackingOrder = 2424
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:high"]
+        }
+
+        def Shader "Multiply_1" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_multiply_float"
+            float inputs:in1.connect = </Root/PresetBrushColor/Subtract_1.outputs:out>
+            float inputs:in2 = 3.142
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (1036.1445, 213.45703)
+            int ui:nodegraph:node:stackingOrder = 2486
+        }
+
+        def Shader "Range" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_constant_float"
+            float inputs:value = 0.35
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (431.2539, 147.17969)
+            int ui:nodegraph:node:stackingOrder = 2424
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:out"]
+        }
+
+        def Shader "Dot_4" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_dot_float"
+            float inputs:in.connect = </Root/PresetBrushColor/Dot_3.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (1213.8984, 55.429688)
+            int ui:nodegraph:node:stackingOrder = 2515
+        }
+
+        def Shader "Dot_2" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_dot_float"
+            float inputs:in.connect = </Root/PresetBrushColor/Dot_1.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (1410.5391, 299.8672)
+            int ui:nodegraph:node:stackingOrder = 2522
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in"]
+        }
+
+        def Shader "UV1" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_geompropvalue_vector2"
+            string inputs:geomprop = "UV1"
+            float2 outputs:out
+            float2 ui:nodegraph:node:pos = (-173.73438, 256.76953)
+            int ui:nodegraph:node:stackingOrder = 2210
+        }
+
+        def Shader "Dot_3" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_dot_float"
+            float inputs:in.connect = </Root/PresetBrushColor/Remap.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (878.47656, 55.691406)
+            int ui:nodegraph:node:stackingOrder = 2515
+        }
+
+        def Shader "Dot_1" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_dot_float"
+            float inputs:in.connect = </Root/PresetBrushColor/Cos.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (1276.3438, 299.4336)
+            int ui:nodegraph:node:stackingOrder = 2522
+        }
+
+        def Shader "Subtract" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_subtract_float"
+            float inputs:in1.connect = </Root/PresetBrushColor/Multiply_2.outputs:out>
+            float inputs:in2.connect = </Root/PresetBrushColor/CurveDistance.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (180.83984, 248.46094)
+            int ui:nodegraph:node:stackingOrder = 2210
+        }
+
+        def Shader "Dot" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_dot_float"
+            float inputs:in.connect = </Root/PresetBrushColor/Subtract.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (282.44922, 3.2304688)
+            int ui:nodegraph:node:stackingOrder = 2424
+        }
+
+        def Shader "MixColors" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg = (0.6862745, 0.32156864, 0.87058824) (
+                colorSpace = "srgb_texture"
+            )
+            color3f inputs:fg = (0, 0.47843137, 1) (
+                colorSpace = "srgb_texture"
+            )
+            float inputs:mix.connect = </Root/PresetBrushColor/Dot_4.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (1352.207, 185.3789)
+            int ui:nodegraph:node:stackingOrder = 2293
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:fg"]
+        }
+
+        def Shader "Cos" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_cos_float"
+            float inputs:in.connect = </Root/PresetBrushColor/Multiply_1.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (1144.7539, 210.66406)
+            int ui:nodegraph:node:stackingOrder = 2488
+        }
+
+        def Shader "CurveDistance" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_extract_vector2"
+            float2 inputs:in.connect = </Root/PresetBrushColor/UV1.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (32.96875, 256.91016)
+            int ui:nodegraph:node:stackingOrder = 2210
+        }
+
+        def Shader "Multiply" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_multiply_color3"
+            color3f inputs:in1.connect = </Root/PresetBrushColor/GeomColor.outputs:out>
+            color3f inputs:in2.connect = </Root/PresetBrushColor/MixStrength.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (1693.9453, 126.67969)
+            int ui:nodegraph:node:stackingOrder = 2510
+        }
+
+        def Shader "HoverState" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_realitykit_hover_state"
+            bool outputs:isActive
+            float3 outputs:position
+            float outputs:timeSinceHoverStart
+            float2 ui:nodegraph:node:pos = (-96.4375, -74.84375)
+            int ui:nodegraph:node:stackingOrder = 2158
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:position"]
+        }
+
+        def Scope "Group" (
+            kind = "group"
+        )
+        {
+            string ui:group:annotation = "Compute Location of Glow Highlight"
+            string ui:group:annotationDescription = "This group produces the distance along the curve of the glow highlight's center."
+            string[] ui:group:members = ["p:HoverState", "p:Multiply_2", "p:Speed"]
+        }
+
+        def Scope "Group2" (
+            kind = "group"
+        )
+        {
+            string ui:group:annotation = "Glow Highlight Location Relative to Geometry"
+            string ui:group:annotationDescription = "This group produces the location of the curve highlight, relative to the current geometry.  Produces a negative number for regions which have already been swept, and a positive number for regions which will be swept."
+            string[] ui:group:members = ["p:CurveDistance", "p:Subtract", "p:UV1"]
+        }
+
+        def Scope "Group3" (
+            kind = "group"
+        )
+        {
+            string ui:group:annotation = "Normalize Distance to Range"
+            string ui:group:annotationDescription = 'This group outputs a normalized distance, such that the value is zero if we are currently at the beginning of the sweep and 1 if we are at the end of the sweep.  It takes into account the uniform "Range" parameter, which controls how long the swept hover effect is.'
+            string[] ui:group:members = ["p:Clamp_1", "p:Remap", "p:Range"]
+        }
+
+        def Scope "Group4" (
+            kind = "group"
+        )
+        {
+            string ui:group:annotation = "Compute Hover Intensity"
+            string ui:group:annotationDescription = "Computes the intensity of the hover effect at this location.  It's a sinusoidal function with a maximal value at the center of the hover effect."
+            string[] ui:group:members = ["p:Multiply_1", "p:Cos", "p:Subtract_1"]
+        }
+
+        def Scope "Group5" (
+            kind = "group"
+        )
+        {
+            string ui:group:annotation = "Blend Colors"
+            string ui:group:annotationDescription = 'The final step is to blend the vertex colors of the curve with the hover effect, depending on the blend factor computed in "Compute Sweep Curve Blend"'
+            string[] ui:group:members = ["p:Multiply", "p:MixStrength", "p:MixColors", "p:GeomColor"]
+        }
+    }
+
+    def Material "SparklePresetBrushMaterial" (
+        references = None
+    )
+    {
+        reorder nameChildren = ["SparkleBrushColor", "SparkleBrushGeometry", "PresetBrushColor", "UnlitSurface", "GeometryModifier"]
+        token cullMode = "none" (
+            allowedTokens = ["unspecified", "none", "front", "back"]
+        )
+        float inputs:ParticleUVScale = 4 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-448.14844, 58.679688)
+                    int stackingOrderInSubgraph = 2001
+                }
+            }
+        )
+        token outputs:mtlx:surface.connect = </Root/SparklePresetBrushMaterial/UnlitSurface.outputs:out>
+        token outputs:realitykit:vertex.connect = </Root/SparklePresetBrushMaterial/GeometryModifier.outputs:out>
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (329.875, -14.921875)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 1994
+
+        def "PresetBrushColor" (
+            active = true
+            references = </Root/PresetBrushColor>
+        )
+        {
+            float2 ui:nodegraph:node:pos = (-442.02197, -84.959335)
+            int ui:nodegraph:node:stackingOrder = 2003
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:Multiply_out"]
+        }
+
+        def Shader "UnlitSurface" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_realitykit_unlit_surfaceshader"
+            bool inputs:applyPostProcessToneMap = 0
+            color3f inputs:color.connect = </Root/SparklePresetBrushMaterial/SparkleBrushColor.outputs:OutputColor>
+            bool inputs:hasPremultipliedAlpha = 1
+            float inputs:opacity = 0
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (65.958496, -69.271835)
+            int ui:nodegraph:node:stackingOrder = 2004
+        }
+
+        def Shader "GeometryModifier" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_realitykit_geometrymodifier_2_0_vertexshader"
+            color4f inputs:color
+            float3 inputs:modelPositionOffset.connect = </Root/SparklePresetBrushMaterial/SparkleBrushGeometry.outputs:ModelPositionOffset>
+            float4 inputs:uv6
+            float4 inputs:uv7
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (55.20459, 217.28676)
+            int ui:nodegraph:node:stackingOrder = 1968
+        }
+
+        def "SparkleBrushColor" (
+            active = true
+            references = @SparkleBrushMaterial.usda@</Root/SparkleBrushMaterial/SparkleBrushColor>
+        )
+        {
+            color3f inputs:BrushColor.connect = </Root/SparklePresetBrushMaterial/PresetBrushColor.outputs:Multiply_out>
+            float inputs:ParticleUVScale.connect = </Root/SparklePresetBrushMaterial.inputs:ParticleUVScale>
+            float2 ui:nodegraph:node:pos = (-199.103, -66.94684)
+            int ui:nodegraph:node:stackingOrder = 1982
+        }
+
+        def "SparkleBrushGeometry" (
+            active = true
+            references = @SparkleBrushMaterial.usda@</Root/SparkleBrushMaterial/SparkleBrushGeometry>
+        )
+        {
+            float inputs:ParticleUVScale.connect = </Root/SparklePresetBrushMaterial.inputs:ParticleUVScale>
+            float2 ui:nodegraph:node:pos = (-203.3436, 121.1189)
+            int ui:nodegraph:node:stackingOrder = 2000
+
+            over "ParticleSpacePosition" (
+                references = None
+            )
+            {
+                over "Multiply"
+                {
+                    float2 inputs:in1
+                    float inputs:in2
+                }
+
+                over "Extract"
+                {
+                    float4 inputs:in
+                }
+
+                over "Subtract"
+                {
+                    float2 inputs:in1
+                }
+            }
+
+            over "ViewFrame" (
+                references = None
+            )
+            {
+                over "Right"
+                {
+                    float3 inputs:in
+                }
+
+                over "Right_Unnormalized"
+                {
+                    float3 inputs:in1
+                }
+
+                over "Up_Unnormalized"
+                {
+                    float3 inputs:in1
+                    float3 inputs:in2
+                }
+
+                over "Up"
+                {
+                    float3 inputs:in
+                }
+
+                over "Dot"
+                {
+                    float3 inputs:in
+                }
+
+                over "Dot_1"
+                {
+                    float3 inputs:in
+                }
+            }
+        }
+
+        def Scope "Group" (
+            kind = "group"
+        )
+        {
+            string ui:group:annotation = "Additive Blending"
+            string ui:group:annotationDescription = 'To use additive blend mode with UnlitSurface, set Opacity to 0 and "Has Premultiplied Alpha" to true.'
+            string[] ui:group:members = ["p:UnlitSurface"]
+        }
+    }
+}
+

@@ -1,0 +1,126 @@
+{
+    "sections": [
+        {
+            "id": "10000000-0000-0000-0000-000000000000",
+            "title": "Integrated Timeline Examples",
+            "items": [
+                {
+                    "id": "10000000-0000-0000-0000-000000000001",
+                    "title": "Point Interstitial",
+                    "description": "Point occupancy interstitial scheduled at 10s",
+                    "url": "https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/main.m3u8",
+                    "interstitialEvents": [
+                        {
+                            "urls": [ "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8" ],
+                            "playoutLimit": 16.0,
+                            "cue": 0,
+                            "startTime": 10.0,
+                            "timelineOccupancy": 0,
+                            "contentMayVary": true
+                        }
+                    ]
+                },
+                {
+                    "id": "10000000-0000-0000-0000-000000000002",
+                    "title": "Fill Interstitial",
+                    "description": "Fill occupancy interstitial scheduled at 10s",
+                    "url": "https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/main.m3u8",
+                    "interstitialEvents": [
+                        {
+                            "urls": [ "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8" ],
+                            "playoutLimit": 16.0,
+                            "cue": 0,
+                            "startTime": 10.0,
+                            "timelineOccupancy": 1,
+                            "contentMayVary": false,
+                            "plannedDuration": 16.0
+                        }
+                    ]
+                },
+                {
+                    "id": "10000000-0000-0000-0000-000000000003",
+                    "title": "Fill (Supplements Primary) Interstitial",
+                    "description": "Fill (supplements primary) occupancy interstitial scheduled at 10s",
+                    "url": "https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/main.m3u8",
+                    "interstitialEvents": [
+                        {
+                            "urls": [ "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8" ],
+                            "playoutLimit": 16.0,
+                            "cue": 0,
+                            "startTime": 10.0,
+                            "timelineOccupancy": 1,
+                            "supplementsPrimary": true,
+                            "contentMayVary": false,
+                            "plannedDuration": 16.0
+                        }
+                    ]
+                },
+                {
+                    "id": "10000000-0000-0000-0000-000000000004",
+                    "title": "Pre-roll Interstitial",
+                    "description": "Fill occupancy pre-roll interstitial",
+                    "url": "https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/main.m3u8",
+                    "interstitialEvents": [
+                        {
+                            "urls": [ "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8" ],
+                            "playoutLimit": 16.0,
+                            "cue": 1,
+                            "timelineOccupancy": 1,
+                            "supplementsPrimary": false,
+                            "contentMayVary": true,
+                            "plannedDuration": 16.0
+                        }
+                    ]
+                },
+                {
+                    "id": "10000000-0000-0000-0000-000000000005",
+                    "title": "Post-roll Interstitial",
+                    "description": "Fill occupancy post-roll interstitial",
+                    "url": "https://devstreaming-cdn.apple.com/videos/streaming/examples/adv_dv_atmos/main.m3u8",
+                    "interstitialEvents": [
+                        {
+                            "urls": [ "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8" ],
+                            "playoutLimit": 16.0,
+                            "cue": 2,
+                            "timelineOccupancy": 1,
+                            "supplementsPrimary": false,
+                            "contentMayVary": true,
+                            "plannedDuration": 16.0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "20000000-0000-0000-0000-000000000000",
+            "title": "Live Stream Examples",
+            "items": [
+                {
+                    "id": "20000000-0000-0000-0000-000000000001",
+                    "title": "Basic Live Stream",
+                    "description": "Live Stream Video",
+                    "url": "http://livestreamserver.url:8443/media.m3u8"
+                },
+                {
+                    "id": "20000000-0000-0000-0000-000000000002",
+                    "title": "Live Stream with Fill Interstitial",
+                    "description": "Live stream video with fill interstitial periodically scheduled every 30s",
+                    "url": "http://livestreamserver.url:8443/media.m3u8",
+                    "playbackBehaviors": 1,
+                    "interstitialEvents": [
+                        {
+                            "urls": [ "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8" ],
+                            "playoutLimit": 16.0,
+                            "cue": 0,
+                            "startTime": 10.0,
+                            "timelineOccupancy": 1,
+                            "supplementsPrimary": false,
+                            "contentMayVary": false,
+                            "plannedDuration": 16.0
+                        }
+                    ]
+                },
+            ]
+        }
+    ]
+}

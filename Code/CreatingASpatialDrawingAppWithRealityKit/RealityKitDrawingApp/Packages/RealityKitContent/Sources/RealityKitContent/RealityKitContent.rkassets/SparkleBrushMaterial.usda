@@ -1,0 +1,526 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0"
+    }
+    defaultPrim = "SparkleBrushMaterial"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root" (
+    active = true
+)
+{
+    quatf xformOp:orient = (1, 0, 0, 0)
+    float3 xformOp:scale = (1, 1, 1)
+    float3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def Material "SparkleBrushMaterial" (
+        references = None
+    )
+    {
+        reorder nameChildren = ["GeomColor", "GeometryModifier", "UnlitSurface", "SparkleBrushColor", "SparkleBrushGeometry", "Root"]
+        token cullMode = "none" (
+            allowedTokens = ["unspecified", "none", "front", "back"]
+        )
+        float inputs:ParticleUVScale = 4 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-378.1289, 114.90234)
+                    int stackingOrderInSubgraph = 849
+                }
+            }
+        )
+        token outputs:mtlx:surface.connect = </Root/SparkleBrushMaterial/UnlitSurface.outputs:out>
+        token outputs:realitykit:vertex.connect = </Root/SparkleBrushMaterial/GeometryModifier.outputs:out>
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (406.5039, 38.722656)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 856
+
+        def Shader "GeomColor" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_geomcolor_color3"
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-381.58075, 2.6202698)
+            int ui:nodegraph:node:stackingOrder = 852
+        }
+
+        def Shader "GeometryModifier" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_realitykit_geometrymodifier_2_0_vertexshader"
+            float3 inputs:bitangent
+            color4f inputs:color
+            float3 inputs:modelPositionOffset.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry.outputs:ModelPositionOffset>
+            float3 inputs:normal
+            float2 inputs:uv0
+            float2 inputs:uv1
+            float4 inputs:uv2
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (133.85156, 295.14844)
+            int ui:nodegraph:node:stackingOrder = 860
+        }
+
+        def Shader "UnlitSurface" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_realitykit_unlit_surfaceshader"
+            bool inputs:applyPostProcessToneMap = 0
+            color3f inputs:color.connect = </Root/SparkleBrushMaterial/SparkleBrushColor.outputs:OutputColor>
+            bool inputs:hasPremultipliedAlpha = 1
+            float inputs:opacity = 0
+            float inputs:opacity.connect = None
+            float inputs:opacityThreshold
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (108.90625, -14.3359375)
+            int ui:nodegraph:node:stackingOrder = 864
+        }
+
+        def NodeGraph "SparkleBrushColor" (
+            references = None
+        )
+        {
+            color3f inputs:BrushColor = (1, 1, 1) (
+                colorSpace = "lin_srgb"
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (869.40234, 208.98047)
+                        int stackingOrderInSubgraph = 1011
+                    }
+                }
+            )
+            color3f inputs:BrushColor.connect = </Root/SparkleBrushMaterial/GeomColor.outputs:out>
+            float inputs:ParticleUVScale (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (427.3203, 450.1211)
+                        int stackingOrderInSubgraph = 1007
+                    }
+                }
+            )
+            float inputs:ParticleUVScale.connect = </Root/SparkleBrushMaterial.inputs:ParticleUVScale>
+            color3f outputs:OutputColor (
+                customData = {
+                    dictionary realitykit = {
+                        int stackingOrderInSubgraph = 1010
+                    }
+                }
+            )
+            color3f outputs:OutputColor.connect = </Root/SparkleBrushMaterial/SparkleBrushColor/Multiply.outputs:out>
+            float2 ui:nodegraph:node:pos = (-147.95847, -4.5444946)
+            int ui:nodegraph:node:stackingOrder = 862
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = []
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1237.75, 219.35547)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 1014
+
+            def Shader "Remap" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_remap_float"
+                float inputs:in.connect = </Root/SparkleBrushMaterial/SparkleBrushColor/Magnitude.outputs:out>
+                float inputs:inhigh = 0.5
+                float inputs:inhigh.connect = None
+                float inputs:inlow
+                float inputs:outhigh = 0
+                float inputs:outhigh.connect = </Root/SparkleBrushMaterial/SparkleBrushColor/Divide.outputs:out>
+                float inputs:outlow = 1
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (727.0469, 380.92188)
+                int ui:nodegraph:node:stackingOrder = 1007
+            }
+
+            def Shader "Divide" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_divide_float"
+                float inputs:in1 = 1
+                float inputs:in1.connect = None
+                float inputs:in2.connect = </Root/SparkleBrushMaterial/SparkleBrushColor.inputs:ParticleUVScale>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (562.78516, 442.01562)
+                int ui:nodegraph:node:stackingOrder = 1007
+            }
+
+            def Shader "Multiply" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_multiply_color3FA"
+                color3f inputs:in1.connect = </Root/SparkleBrushMaterial/SparkleBrushColor.inputs:BrushColor>
+                float inputs:in2.connect = </Root/SparkleBrushMaterial/SparkleBrushColor/Clamp.outputs:out>
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (1059.9141, 246.82031)
+                int ui:nodegraph:node:stackingOrder = 1013
+            }
+
+            def Shader "UV" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_texcoord_vector2"
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (235.30469, 364.91797)
+                int ui:nodegraph:node:stackingOrder = 1007
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:out"]
+            }
+
+            def Shader "Clamp" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_clamp_float"
+                float inputs:high = 1
+                float inputs:in.connect = </Root/SparkleBrushMaterial/SparkleBrushColor/Remap.outputs:out>
+                float inputs:low = 0
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (901.03516, 377.95703)
+                int ui:nodegraph:node:stackingOrder = 1010
+            }
+
+            def Shader "Magnitude" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_magnitude_vector2"
+                float2 inputs:in.connect = </Root/SparkleBrushMaterial/SparkleBrushColor/Subtract.outputs:out>
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (524.2656, 368.03125)
+                int ui:nodegraph:node:stackingOrder = 1007
+            }
+
+            def Shader "Subtract" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_subtract_vector2"
+                float2 inputs:in1.connect = </Root/SparkleBrushMaterial/SparkleBrushColor/UV.outputs:out>
+                float2 inputs:in2 = (0.5, 0.5)
+                float2 outputs:out
+                float2 ui:nodegraph:node:pos = (391.72266, 369.15625)
+                int ui:nodegraph:node:stackingOrder = 1007
+            }
+        }
+
+        def NodeGraph "SparkleBrushGeometry" (
+            references = None
+        )
+        {
+            float inputs:ParticleUVScale = 0 (
+                customData = {
+                    dictionary realitykit = {
+                        float2 positionInSubgraph = (599.8086, 307.13672)
+                        int stackingOrderInSubgraph = 486
+                    }
+                }
+            )
+            float inputs:ParticleUVScale.connect = </Root/SparkleBrushMaterial.inputs:ParticleUVScale>
+            float3 outputs:ModelPositionOffset (
+                customData = {
+                    dictionary realitykit = {
+                        int stackingOrderInSubgraph = 492
+                    }
+                }
+            )
+            float3 outputs:ModelPositionOffset.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/Multiply_2.outputs:out>
+            float2 ui:nodegraph:node:pos = (-146.75766, 259.09155)
+            int ui:nodegraph:node:stackingOrder = 831
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = []
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (949.6172, 181.89844)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 494
+
+            def NodeGraph "ParticleSpacePosition" (
+                references = None
+            )
+            {
+                float2 outputs:Position (
+                    customData = {
+                        dictionary realitykit = {
+                            int stackingOrderInSubgraph = 289
+                        }
+                    }
+                )
+                float2 outputs:Position.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ParticleSpacePosition/Multiply.outputs:out>
+                float2 ui:nodegraph:node:pos = (43.472656, 36.86328)
+                int ui:nodegraph:node:stackingOrder = 470
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:Position"]
+                float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (620.3641, 86.46094)
+                int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 549
+
+                def Shader "Size" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_texcoord_vector4"
+                    int inputs:index = 2
+                    float4 outputs:out
+                    float2 ui:nodegraph:node:pos = (134.0039, 120.63672)
+                    int ui:nodegraph:node:stackingOrder = 546
+                    string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:out"]
+                }
+
+                def Shader "Multiply" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_multiply_vector2FA"
+                    float2 inputs:in1.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ParticleSpacePosition/Subtract.outputs:out>
+                    float inputs:in2.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ParticleSpacePosition/Extract.outputs:out>
+                    float2 outputs:out
+                    float2 ui:nodegraph:node:pos = (447.22266, 113.44141)
+                    int ui:nodegraph:node:stackingOrder = 548
+                    string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:in1", "outputs:out"]
+                }
+
+                def Shader "PositionInParticle" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_texcoord_vector2"
+                    float2 outputs:out
+                    float2 ui:nodegraph:node:pos = (106.57422, -31.613281)
+                    int ui:nodegraph:node:stackingOrder = 545
+                }
+
+                def Shader "Extract" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_extract_vector4"
+                    float4 inputs:in.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ParticleSpacePosition/Size.outputs:out>
+                    int inputs:index
+                    float outputs:out
+                    float2 ui:nodegraph:node:pos = (320.34375, 122.73828)
+                    int ui:nodegraph:node:stackingOrder = 547
+                }
+
+                def Shader "Subtract" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_subtract_vector2"
+                    float2 inputs:in1.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ParticleSpacePosition/PositionInParticle.outputs:out>
+                    float2 inputs:in2 = (0.5, 0.5)
+                    float2 outputs:out
+                    float2 ui:nodegraph:node:pos = (325.9453, -23.558594)
+                    int ui:nodegraph:node:stackingOrder = 543
+                }
+
+                def Scope "Group" (
+                    kind = "group"
+                )
+                {
+                    string ui:group:annotation = "Remap UVs from (0, 1) to (-0.5, 0.5)"
+                    string ui:group:annotationDescription = ""
+                    string[] ui:group:members = ["p:Subtract", "p:PositionInParticle"]
+                }
+
+                def Scope "Group2" (
+                    kind = "group"
+                )
+                {
+                    string ui:group:annotation = "Scale by particle size"
+                    string ui:group:annotationDescription = ""
+                    string[] ui:group:members = ["p:Extract", "p:Size", "p:Multiply"]
+                }
+            }
+
+            def Shader "Multiply"
+            {
+                uniform token info:id = "ND_multiply_vector3FA"
+                float3 inputs:in1.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ViewFrame.outputs:Right>
+                float inputs:in2.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/Separate2.outputs:outx>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (453, 113.75)
+                int ui:nodegraph:node:stackingOrder = 453
+            }
+
+            def Shader "Add" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_add_vector3"
+                float3 inputs:in1.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/Multiply.outputs:out>
+                float3 inputs:in2.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/Multiply_1.outputs:out>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (644.0039, 159.65625)
+                int ui:nodegraph:node:stackingOrder = 460
+            }
+
+            def Shader "Separate2" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_separate2_vector2"
+                float2 inputs:in.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ParticleSpacePosition.outputs:Position>
+                float outputs:outx
+                float outputs:outy
+                float2 ui:nodegraph:node:pos = (247.5625, 59.70703)
+                int ui:nodegraph:node:stackingOrder = 407
+            }
+
+            def NodeGraph "ViewFrame" (
+                references = None
+            )
+            {
+                float3 outputs:Right (
+                    customData = {
+                        dictionary realitykit = {
+                            int stackingOrderInSubgraph = 290
+                        }
+                    }
+                )
+                float3 outputs:Right.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ViewFrame/Right.outputs:out>
+                float3 outputs:Up (
+                    customData = {
+                        dictionary realitykit = {
+                            int stackingOrderInSubgraph = 290
+                        }
+                    }
+                )
+                float3 outputs:Up.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ViewFrame/Up.outputs:out>
+                float2 ui:nodegraph:node:pos = (235.67578, 243.25)
+                int ui:nodegraph:node:stackingOrder = 357
+                float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1136.9006, -5.6961317)
+                int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 661
+
+                def Shader "Right" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_normalize_vector3"
+                    float3 inputs:in.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ViewFrame/Right_Unnormalized.outputs:out>
+                    float3 outputs:out
+                    float2 ui:nodegraph:node:pos = (507.14062, 16.460938)
+                    int ui:nodegraph:node:stackingOrder = 511
+                }
+
+                def Shader "Right_Unnormalized" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_crossproduct_vector3"
+                    float3 inputs:in1.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ViewFrame/Dot_1.outputs:out>
+                    float3 inputs:in2 = (0, 1, 0)
+                    float3 outputs:out
+                    float2 ui:nodegraph:node:pos = (285.48438, 16.785156)
+                    int ui:nodegraph:node:stackingOrder = 661
+                }
+
+                def Shader "ViewDirection" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_realitykit_viewdirection_vector3"
+                    string inputs:space = "model"
+                    float3 outputs:out
+                    float2 ui:nodegraph:node:pos = (-134.39844, 163.47656)
+                    int ui:nodegraph:node:stackingOrder = 534
+                }
+
+                def Shader "Up_Unnormalized" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_crossproduct_vector3"
+                    float3 inputs:in1.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ViewFrame/ViewDirection.outputs:out>
+                    float3 inputs:in2.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ViewFrame/Dot.outputs:out>
+                    float3 outputs:out
+                    float2 ui:nodegraph:node:pos = (735.6367, 156.38672)
+                    int ui:nodegraph:node:stackingOrder = 658
+                }
+
+                def Shader "Up" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_normalize_vector3"
+                    float3 inputs:in.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ViewFrame/Up_Unnormalized.outputs:out>
+                    float3 outputs:out
+                    float2 ui:nodegraph:node:pos = (942.70703, 155.85156)
+                    int ui:nodegraph:node:stackingOrder = 659
+                }
+
+                def Shader "Dot" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_dot_vector3"
+                    float3 inputs:in.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ViewFrame/Right_Unnormalized.outputs:out>
+                    float3 outputs:out
+                    float2 ui:nodegraph:node:pos = (468.03455, 167.0212)
+                    int ui:nodegraph:node:stackingOrder = 657
+                }
+
+                def Scope "Group" (
+                    kind = "group"
+                )
+                {
+                    string ui:group:annotation = "Compute Left/Right Direction"
+                    string ui:group:annotationDescription = "Each particle is rendered as a plane, and this plane is perpendicular to ViewDirection.  The left/right direction is parallel to the plane."
+                    string[] ui:group:members = ["p:Right_Unnormalized", "p:Right"]
+                }
+
+                def Shader "Dot_1" (
+                    references = None
+                )
+                {
+                    uniform token info:id = "ND_dot_vector3"
+                    float3 inputs:in.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ViewFrame/ViewDirection.outputs:out>
+                    float3 outputs:out
+                    float2 ui:nodegraph:node:pos = (45.382812, 11.4140625)
+                    int ui:nodegraph:node:stackingOrder = 532
+                }
+
+                def Scope "Group2" (
+                    kind = "group"
+                )
+                {
+                    string ui:group:annotation = "Compute Up/Down Direction"
+                    string ui:group:annotationDescription = "The up/down direction is parallel to the particle's plane and perpendicular to both ViewDirection and the left/right direction."
+                    string[] ui:group:members = ["p:Up", "p:Up_Unnormalized"]
+                }
+            }
+
+            def Shader "Multiply_1" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_multiply_vector3FA"
+                float3 inputs:in1.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/ViewFrame.outputs:Up>
+                float inputs:in2.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/Separate2.outputs:outy>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (453, 209.75)
+                int ui:nodegraph:node:stackingOrder = 468
+            }
+
+            def Scope "Group" (
+                kind = "group"
+            )
+            {
+                string ui:group:annotation = "Compute model space position"
+                string ui:group:annotationDescription = "The model space position is the X coordinate of the particle space position multiplied by the right direction, plus the Y coordinate of the particle space position multipled by the up direction."
+                string[] ui:group:members = ["p:Multiply_1", "p:Add", "p:Multiply"]
+            }
+
+            def Shader "Multiply_2" (
+                references = None
+            )
+            {
+                uniform token info:id = "ND_multiply_vector3FA"
+                float3 inputs:in1.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry/Add.outputs:out>
+                float inputs:in2.connect = </Root/SparkleBrushMaterial/SparkleBrushGeometry.inputs:ParticleUVScale>
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (763.71875, 207.32617)
+                int ui:nodegraph:node:stackingOrder = 492
+            }
+        }
+    }
+}
+

@@ -1,0 +1,224 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 2.0"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["DashedLineMaterial", "TestDashedLine", "GrabberMaterial"]
+    def Material "DashedLineMaterial" (
+        references = None
+    )
+    {
+        color3f inputs:Color = (0.050156783, 0.19748625, 0.5) (
+            colorSpace = "lin_srgb"
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (873.56964, 67.41553)
+                    int stackingOrderInSubgraph = 809
+                }
+            }
+        )
+        float inputs:DashLength = 0.05 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (314.98718, 150.36517)
+                    int stackingOrderInSubgraph = 760
+                }
+            }
+        )
+        float inputs:DashSpeed = 0.02 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-94.671875, 181.3789)
+                    int stackingOrderInSubgraph = 654
+                }
+            }
+        )
+        token outputs:mtlx:surface.connect = </Root/DashedLineMaterial/UnlitSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (1562.4655, 144.9996)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 822
+
+        def Shader "UnlitSurface" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_realitykit_unlit_surfaceshader"
+            bool inputs:applyPostProcessToneMap
+            color3f inputs:color.connect = </Root/DashedLineMaterial/Mix.outputs:out>
+            bool inputs:hasPremultipliedAlpha = 1
+            float inputs:opacity = 0
+            float inputs:opacityThreshold
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (1319.8121, 91.03386)
+            int ui:nodegraph:node:stackingOrder = 818
+        }
+
+        def Shader "Time" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_time_float"
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-85.427734, 106.6875)
+            int ui:nodegraph:node:stackingOrder = 654
+        }
+
+        def Shader "Position" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_position_vector3"
+            string inputs:space = "world"
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-198.54492, 24.351562)
+            int ui:nodegraph:node:stackingOrder = 654
+        }
+
+        def Shader "Y_Coordinate" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_extract_vector3"
+            float3 inputs:in.connect = </Root/DashedLineMaterial/Position.outputs:out>
+            int inputs:index = 1
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-21.222656, 32.839844)
+            int ui:nodegraph:node:stackingOrder = 654
+        }
+
+        def Shader "Add" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_add_float"
+            float inputs:in1.connect = </Root/DashedLineMaterial/Y_Coordinate.outputs:out>
+            float inputs:in2.connect = </Root/DashedLineMaterial/Multiply.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (145.03125, 100.84375)
+            int ui:nodegraph:node:stackingOrder = 654
+        }
+
+        def Shader "Multiply" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_multiply_float"
+            float inputs:in1.connect = </Root/DashedLineMaterial/Time.outputs:out>
+            float inputs:in2.connect = </Root/DashedLineMaterial.inputs:DashSpeed>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (37.597656, 128.65625)
+            int ui:nodegraph:node:stackingOrder = 654
+        }
+
+        def Shader "Divide" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_divide_float"
+            float inputs:in1.connect = </Root/DashedLineMaterial/Add.outputs:out>
+            float inputs:in2.connect = </Root/DashedLineMaterial.inputs:DashLength>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (447.0028, 108.09955)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Shader "Floor" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_floor_float"
+            float inputs:in.connect = </Root/DashedLineMaterial/Modulo.outputs:out>
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (668.52234, 103.39252)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Shader "Mix" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_mix_color3"
+            color3f inputs:bg
+            color3f inputs:fg = (1, 1, 1) (
+                colorSpace = "lin_srgb"
+            )
+            color3f inputs:fg.connect = </Root/DashedLineMaterial.inputs:Color>
+            float inputs:mix.connect = </Root/DashedLineMaterial/Floor.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (1053.9192, 72.54053)
+            int ui:nodegraph:node:stackingOrder = 809
+        }
+
+        def Shader "Modulo" (
+            references = None
+        )
+        {
+            uniform token info:id = "ND_modulo_float"
+            float inputs:in1.connect = </Root/DashedLineMaterial/Divide.outputs:out>
+            float inputs:in2 = 2
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (545.0536, 105.872986)
+            int ui:nodegraph:node:stackingOrder = 760
+        }
+
+        def Scope "Group" (
+            kind = "group"
+        )
+        {
+            string ui:group:annotation = "Offset Y Coordinate by DashSpeed * Time "
+            string ui:group:annotationDescription = ""
+            string[] ui:group:members = ["p:Time", "p:Multiply", "i:inputs:DashSpeed", "p:Position", "p:Add", "p:Y_Coordinate"]
+        }
+
+        def Scope "Group2" (
+            kind = "group"
+        )
+        {
+            string ui:group:annotation = "Flip between 0 and 1 every `DashLength` units"
+            string ui:group:annotationDescription = ""
+            string[] ui:group:members = ["p:Floor", "p:Divide", "i:inputs:DashLength", "p:Modulo"]
+        }
+
+        def Scope "Group3" (
+            kind = "group"
+        )
+        {
+            string ui:group:annotation = "Choose `Color` if result is 1, else black"
+            string ui:group:annotationDescription = ""
+            string[] ui:group:members = ["i:inputs:Color", "p:Mix"]
+        }
+
+        def Scope "Group4" (
+            kind = "group"
+        )
+        {
+            string ui:group:annotation = "Additive Blending"
+            string ui:group:annotationDescription = 'To use additive blend mode with UnlitSurface, set Opacity to 0 and "Has Premultiplied Alpha" to true.'
+            string[] ui:group:members = ["p:UnlitSurface"]
+        }
+    }
+
+    def Cylinder "TestDashedLine" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        references = None
+    )
+    {
+        uniform token axis = "Y"
+        double height = 0.2
+        rel material:binding = </Root/DashedLineMaterial> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double radius = 0.1
+        float3 xformOp:scale = (0.05, 5, 0.05)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+}
+

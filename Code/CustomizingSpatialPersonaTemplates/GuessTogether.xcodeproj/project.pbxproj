@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C310AA572BD1F2970098D2B8 /* Publisher+withPrevious.swift in Sources */ = {isa = PBXBuildFile; fileRef = C310AA562BD1F2970098D2B8 /* Publisher+withPrevious.swift */; };
+		F50303DC2BD97752005EC512 /* GameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50303DB2BD97752005EC512 /* GameSpace.swift */; };
+		F5155FD42BD09B5D004F1CA1 /* GuessTogetherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5155FD32BD09B5D004F1CA1 /* GuessTogetherApp.swift */; };
+		F5155FD82BD09B5D004F1CA1 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5155FD72BD09B5D004F1CA1 /* AppModel.swift */; };
+		F518FDCF2BD875A7001D1F19 /* NameAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518FDCE2BD875A7001D1F19 /* NameAlert.swift */; };
+		F5355BF92BD588DA00B519B3 /* GameScoreBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF2A112BD1EC6100C66F78 /* GameScoreBoardView.swift */; };
+		F54255D02BD2DE30006B9A37 /* Phrases.json in Resources */ = {isa = PBXBuildFile; fileRef = F54255CF2BD2DE26006B9A37 /* Phrases.json */; };
+		F54255D22BD2E3B5006B9A37 /* PhraseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54255D12BD2E3B5006B9A37 /* PhraseManager.swift */; };
+		F54255D42BD2E6BB006B9A37 /* CategorySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54255D32BD2E6BB006B9A37 /* CategorySelectionView.swift */; };
+		F5643ADA2BD704D500FFF716 /* TeamSelectionTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF16262BD70475008D168F /* TeamSelectionTemplate.swift */; };
+		F5643ADC2BD708FF00FFF716 /* GameTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5643ADB2BD708FF00FFF716 /* GameTemplate.swift */; };
+		F5643AE02BD70C6E00FFF716 /* PhraseDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5643ADF2BD70B2600FFF716 /* PhraseDeckView.swift */; };
+		F5643AE22BD7191700FFF716 /* PhraseDeckPodiumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5643AE12BD718D700FFF716 /* PhraseDeckPodiumView.swift */; };
+		F5643AE82BD7355800FFF716 /* SeatScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5643AE72BD7355800FFF716 /* SeatScoresView.swift */; };
+		F5A044242BD44EA000EDAAD5 /* SessionController+PlayerOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A044232BD44EA000EDAAD5 /* SessionController+PlayerOrder.swift */; };
+		F5A0442A2BD57A3E00EDAAD5 /* TeamSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A044292BD579C600EDAAD5 /* TeamSelectionView.swift */; };
+		F5AF16242BD6FC7E008D168F /* SessionController+RemoteParticipantSynchronization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF16232BD6FC7E008D168F /* SessionController+RemoteParticipantSynchronization.swift */; };
+		F5CF2A052BD1C07A00C66F78 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF2A042BD1C07A00C66F78 /* GameModel.swift */; };
+		F5CF2A072BD1CD8A00C66F78 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF2A062BD1CD8A00C66F78 /* SessionController.swift */; };
+		F5CF2A092BD1CF9600C66F78 /* GuessTogetherActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF2A082BD1CF9600C66F78 /* GuessTogetherActivity.swift */; };
+		F5CF2A0B2BD1D1A900C66F78 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF2A0A2BD1D1A900C66F78 /* PlayerModel.swift */; };
+		F5CF2A152BD1F42D00C66F78 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CF2A122BD1EC6700C66F78 /* WelcomeView.swift */; };
+		F5E971A32BE0492900A0BE6A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E971A22BE0492900A0BE6A /* ContentView.swift */; };
+		F5E971A52BE04BC200A0BE6A /* GuessTogetherWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E971A42BE04BC200A0BE6A /* GuessTogetherWindow.swift */; };
+		F5ED05F32BD33974007C6C60 /* GuessTogetherToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ED05F22BD333E0007C6C60 /* GuessTogetherToolbar.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		475409EE5B8057AEF1677487 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7688F8DEB562CE9A08724A7B /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		C310AA562BD1F2970098D2B8 /* Publisher+withPrevious.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+withPrevious.swift"; sourceTree = "<group>"; };
+		F1D93E542B451142BE1E50AB /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		F50303DB2BD97752005EC512 /* GameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSpace.swift; sourceTree = "<group>"; };
+		F5155FCC2BD09B5D004F1CA1 /* GuessTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5155FD32BD09B5D004F1CA1 /* GuessTogetherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTogetherApp.swift; sourceTree = "<group>"; };
+		F5155FD72BD09B5D004F1CA1 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		F5155FE02BD09B5F004F1CA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5155FE62BD09BEB004F1CA1 /* GuessTogether.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GuessTogether.entitlements; sourceTree = "<group>"; };
+		F518FDCE2BD875A7001D1F19 /* NameAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAlert.swift; sourceTree = "<group>"; };
+		F54255CF2BD2DE26006B9A37 /* Phrases.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Phrases.json; sourceTree = "<group>"; };
+		F54255D12BD2E3B5006B9A37 /* PhraseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseManager.swift; sourceTree = "<group>"; };
+		F54255D32BD2E6BB006B9A37 /* CategorySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionView.swift; sourceTree = "<group>"; };
+		F5643ADB2BD708FF00FFF716 /* GameTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTemplate.swift; sourceTree = "<group>"; };
+		F5643ADF2BD70B2600FFF716 /* PhraseDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseDeckView.swift; sourceTree = "<group>"; };
+		F5643AE12BD718D700FFF716 /* PhraseDeckPodiumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseDeckPodiumView.swift; sourceTree = "<group>"; };
+		F5643AE72BD7355800FFF716 /* SeatScoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatScoresView.swift; sourceTree = "<group>"; };
+		F5A044232BD44EA000EDAAD5 /* SessionController+PlayerOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionController+PlayerOrder.swift"; sourceTree = "<group>"; };
+		F5A044292BD579C600EDAAD5 /* TeamSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectionView.swift; sourceTree = "<group>"; };
+		F5AF16232BD6FC7E008D168F /* SessionController+RemoteParticipantSynchronization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionController+RemoteParticipantSynchronization.swift"; sourceTree = "<group>"; };
+		F5AF16262BD70475008D168F /* TeamSelectionTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectionTemplate.swift; sourceTree = "<group>"; };
+		F5CF2A042BD1C07A00C66F78 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		F5CF2A062BD1CD8A00C66F78 /* SessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionController.swift; sourceTree = "<group>"; };
+		F5CF2A082BD1CF9600C66F78 /* GuessTogetherActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTogetherActivity.swift; sourceTree = "<group>"; };
+		F5CF2A0A2BD1D1A900C66F78 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		F5CF2A112BD1EC6100C66F78 /* GameScoreBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScoreBoardView.swift; sourceTree = "<group>"; };
+		F5CF2A122BD1EC6700C66F78 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		F5E971A22BE0492900A0BE6A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F5E971A42BE04BC200A0BE6A /* GuessTogetherWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTogetherWindow.swift; sourceTree = "<group>"; };
+		F5ED05F22BD333E0007C6C60 /* GuessTogetherToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTogetherToolbar.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5155FC92BD09B5D004F1CA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85B3F5EE87134CA42ACB3A8E /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F1D93E542B451142BE1E50AB /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		C310AA552BD1F2750098D2B8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F54255D12BD2E3B5006B9A37 /* PhraseManager.swift */,
+				C310AA562BD1F2970098D2B8 /* Publisher+withPrevious.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E729392C6332EF7AEF86125F /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				7688F8DEB562CE9A08724A7B /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+		F5155FC32BD09B5D004F1CA1 = {
+			isa = PBXGroup;
+			children = (
+				475409EE5B8057AEF1677487 /* README.md */,
+				F5155FCE2BD09B5D004F1CA1 /* GuessTogether */,
+				F5155FCD2BD09B5D004F1CA1 /* Products */,
+				85B3F5EE87134CA42ACB3A8E /* Configuration */,
+				E729392C6332EF7AEF86125F /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		F5155FCD2BD09B5D004F1CA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5155FCC2BD09B5D004F1CA1 /* GuessTogether.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5155FCE2BD09B5D004F1CA1 /* GuessTogether */ = {
+			isa = PBXGroup;
+			children = (
+				F5155FD32BD09B5D004F1CA1 /* GuessTogetherApp.swift */,
+				F5E971A42BE04BC200A0BE6A /* GuessTogetherWindow.swift */,
+				F5CF2A0C2BD1EBF700C66F78 /* WindowViews */,
+				F5643ADE2BD70B0E00FFF716 /* ImmersiveSpace */,
+				F5A044252BD5788500EDAAD5 /* Models */,
+				F5A044262BD578BA00EDAAD5 /* GroupActivity */,
+				F5AF16252BD70440008D168F /* SpatialPersonaTemplates */,
+				C310AA552BD1F2750098D2B8 /* Utilities */,
+				F54255CE2BD2DE07006B9A37 /* Resources */,
+			);
+			path = GuessTogether;
+			sourceTree = "<group>";
+		};
+		F54255CE2BD2DE07006B9A37 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F54255CF2BD2DE26006B9A37 /* Phrases.json */,
+				F5155FE62BD09BEB004F1CA1 /* GuessTogether.entitlements */,
+				F5155FE02BD09B5F004F1CA1 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F5643ADE2BD70B0E00FFF716 /* ImmersiveSpace */ = {
+			isa = PBXGroup;
+			children = (
+				F50303DB2BD97752005EC512 /* GameSpace.swift */,
+				F5643AE12BD718D700FFF716 /* PhraseDeckPodiumView.swift */,
+				F5643ADF2BD70B2600FFF716 /* PhraseDeckView.swift */,
+				F5643AE72BD7355800FFF716 /* SeatScoresView.swift */,
+			);
+			path = ImmersiveSpace;
+			sourceTree = "<group>";
+		};
+		F5A044252BD5788500EDAAD5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F5155FD72BD09B5D004F1CA1 /* AppModel.swift */,
+				F5CF2A042BD1C07A00C66F78 /* GameModel.swift */,
+				F5CF2A0A2BD1D1A900C66F78 /* PlayerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F5A044262BD578BA00EDAAD5 /* GroupActivity */ = {
+			isa = PBXGroup;
+			children = (
+				F5CF2A082BD1CF9600C66F78 /* GuessTogetherActivity.swift */,
+				F5CF2A062BD1CD8A00C66F78 /* SessionController.swift */,
+				F5AF16232BD6FC7E008D168F /* SessionController+RemoteParticipantSynchronization.swift */,
+				F5A044232BD44EA000EDAAD5 /* SessionController+PlayerOrder.swift */,
+			);
+			path = GroupActivity;
+			sourceTree = "<group>";
+		};
+		F5AF16252BD70440008D168F /* SpatialPersonaTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				F5AF16262BD70475008D168F /* TeamSelectionTemplate.swift */,
+				F5643ADB2BD708FF00FFF716 /* GameTemplate.swift */,
+			);
+			path = SpatialPersonaTemplates;
+			sourceTree = "<group>";
+		};
+		F5CF2A0C2BD1EBF700C66F78 /* WindowViews */ = {
+			isa = PBXGroup;
+			children = (
+				F5E971A22BE0492900A0BE6A /* ContentView.swift */,
+				F5CF2A122BD1EC6700C66F78 /* WelcomeView.swift */,
+				F54255D32BD2E6BB006B9A37 /* CategorySelectionView.swift */,
+				F5A044292BD579C600EDAAD5 /* TeamSelectionView.swift */,
+				F5CF2A112BD1EC6100C66F78 /* GameScoreBoardView.swift */,
+				F5ED05F12BD333D3007C6C60 /* Shared */,
+			);
+			path = WindowViews;
+			sourceTree = "<group>";
+		};
+		F5ED05F12BD333D3007C6C60 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F518FDCE2BD875A7001D1F19 /* NameAlert.swift */,
+				F5ED05F22BD333E0007C6C60 /* GuessTogetherToolbar.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5155FCB2BD09B5D004F1CA1 /* GuessTogether */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5155FE32BD09B5F004F1CA1 /* Build configuration list for PBXNativeTarget "GuessTogether" */;
+			buildPhases = (
+				F5155FC82BD09B5D004F1CA1 /* Sources */,
+				F5155FC92BD09B5D004F1CA1 /* Frameworks */,
+				F5155FCA2BD09B5D004F1CA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GuessTogether;
+			productName = GuessTogether;
+			productReference = F5155FCC2BD09B5D004F1CA1 /* GuessTogether.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5155FC42BD09B5D004F1CA1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					F5155FCB2BD09B5D004F1CA1 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = F5155FC72BD09B5D004F1CA1 /* Build configuration list for PBXProject "GuessTogether" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5155FC32BD09B5D004F1CA1;
+			productRefGroup = F5155FCD2BD09B5D004F1CA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5155FCB2BD09B5D004F1CA1 /* GuessTogether */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5155FCA2BD09B5D004F1CA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F54255D02BD2DE30006B9A37 /* Phrases.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5155FC82BD09B5D004F1CA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5355BF92BD588DA00B519B3 /* GameScoreBoardView.swift in Sources */,
+				F5A0442A2BD57A3E00EDAAD5 /* TeamSelectionView.swift in Sources */,
+				F5CF2A0B2BD1D1A900C66F78 /* PlayerModel.swift in Sources */,
+				F5A044242BD44EA000EDAAD5 /* SessionController+PlayerOrder.swift in Sources */,
+				F5CF2A052BD1C07A00C66F78 /* GameModel.swift in Sources */,
+				F5643AE82BD7355800FFF716 /* SeatScoresView.swift in Sources */,
+				F5E971A52BE04BC200A0BE6A /* GuessTogetherWindow.swift in Sources */,
+				F5155FD82BD09B5D004F1CA1 /* AppModel.swift in Sources */,
+				F5AF16242BD6FC7E008D168F /* SessionController+RemoteParticipantSynchronization.swift in Sources */,
+				F5CF2A092BD1CF9600C66F78 /* GuessTogetherActivity.swift in Sources */,
+				F5CF2A152BD1F42D00C66F78 /* WelcomeView.swift in Sources */,
+				F54255D22BD2E3B5006B9A37 /* PhraseManager.swift in Sources */,
+				C310AA572BD1F2970098D2B8 /* Publisher+withPrevious.swift in Sources */,
+				F50303DC2BD97752005EC512 /* GameSpace.swift in Sources */,
+				F5643AE22BD7191700FFF716 /* PhraseDeckPodiumView.swift in Sources */,
+				F5643AE02BD70C6E00FFF716 /* PhraseDeckView.swift in Sources */,
+				F5643ADC2BD708FF00FFF716 /* GameTemplate.swift in Sources */,
+				F5CF2A072BD1CD8A00C66F78 /* SessionController.swift in Sources */,
+				F5E971A32BE0492900A0BE6A /* ContentView.swift in Sources */,
+				F5ED05F32BD33974007C6C60 /* GuessTogetherToolbar.swift in Sources */,
+				F518FDCF2BD875A7001D1F19 /* NameAlert.swift in Sources */,
+				F5155FD42BD09B5D004F1CA1 /* GuessTogetherApp.swift in Sources */,
+				F54255D42BD2E6BB006B9A37 /* CategorySelectionView.swift in Sources */,
+				F5643ADA2BD704D500FFF716 /* TeamSelectionTemplate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F5155FE12BD09B5F004F1CA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1D93E542B451142BE1E50AB /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		F5155FE22BD09B5F004F1CA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1D93E542B451142BE1E50AB /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		F5155FE42BD09B5F004F1CA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1D93E542B451142BE1E50AB /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GuessTogether/Resources/GuessTogether.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.GuessTogether${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		F5155FE52BD09B5F004F1CA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1D93E542B451142BE1E50AB /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GuessTogether/Resources/GuessTogether.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.GuessTogether${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = xros;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5155FC72BD09B5D004F1CA1 /* Build configuration list for PBXProject "GuessTogether" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5155FE12BD09B5F004F1CA1 /* Debug */,
+				F5155FE22BD09B5F004F1CA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5155FE32BD09B5F004F1CA1 /* Build configuration list for PBXNativeTarget "GuessTogether" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5155FE42BD09B5F004F1CA1 /* Debug */,
+				F5155FE52BD09B5F004F1CA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5155FC42BD09B5D004F1CA1 /* Project object */;
+}

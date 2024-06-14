@@ -1,0 +1,52 @@
+{
+  "0D5D28CA-700B-45EA-AA82-A2EF5BDC6C8D" : {
+    "objectMetadataList" : [
+      [
+        "0D5D28CA-700B-45EA-AA82-A2EF5BDC6C8D",
+        "Root",
+        "Rectangle"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "0D5D28CA-700B-45EA-AA82-A2EF5BDC6C8D",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "0D5D28CA-700B-45EA-AA82-A2EF5BDC6C8D",
+        "Root",
+        "TempleFrameBaked"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "0D5D28CA-700B-45EA-AA82-A2EF5BDC6C8D",
+        "Root",
+        "Rectangle",
+        "Material"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "0D5D28CA-700B-45EA-AA82-A2EF5BDC6C8D",
+        "Root",
+        "TempleFrameBaked",
+        "Material"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  }
+}

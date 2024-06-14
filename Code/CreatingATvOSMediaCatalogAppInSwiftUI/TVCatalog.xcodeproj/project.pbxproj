@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		383AF4672BDF23A4002F64D8 /* VisibleWhenFocusedModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383AF4662BDF23A4002F64D8 /* VisibleWhenFocusedModifier.swift */; };
+		383AF4692BDF2510002F64D8 /* HeroHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383AF4682BDF2510002F64D8 /* HeroHeaderView.swift */; };
+		384591232BF26D3E003CD0E2 /* SidebarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384591222BF26D3E003CD0E2 /* SidebarContentView.swift */; };
+		386D05E62BE97B1700E143DA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D05E52BE97B1700E143DA /* SearchView.swift */; };
+		38C5AFB42BBF18B5009C6DC6 /* TVCatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5AFB32BBF18B5009C6DC6 /* TVCatalogApp.swift */; };
+		38C5AFB62BBF18B5009C6DC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5AFB52BBF18B5009C6DC6 /* ContentView.swift */; };
+		38C5AFB82BBF18B6009C6DC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C5AFB72BBF18B6009C6DC6 /* Assets.xcassets */; };
+		38C5AFBB2BBF18B6009C6DC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C5AFBA2BBF18B6009C6DC6 /* Preview Assets.xcassets */; };
+		38DF62762BDF2BE100F730EE /* MovieShelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF62752BDF2BE100F730EE /* MovieShelf.swift */; };
+		38DF62782BDF2D3200F730EE /* TVMusicShelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF62772BDF2D3200F730EE /* TVMusicShelf.swift */; };
+		38DF627B2BDF3CB100F730EE /* CodeSampleArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF627A2BDF3CB100F730EE /* CodeSampleArtwork.swift */; };
+		38DF62AB2BE3166600F730EE /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF62AA2BE3166600F730EE /* Asset.swift */; };
+		38DF62B22BE3168200F730EE /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF62AF2BE3168200F730EE /* DescriptionView.swift */; };
+		38DF62B32BE3168200F730EE /* CardShelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF62AE2BE3168200F730EE /* CardShelf.swift */; };
+		38DF62B52BE3168200F730EE /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF62B12BE3168200F730EE /* StackView.swift */; };
+		38DF62B62BE3168200F730EE /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF62AC2BE3168200F730EE /* ButtonsView.swift */; };
+		38DF62B72BE3168200F730EE /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF62AD2BE3168200F730EE /* CardContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		383AF4662BDF23A4002F64D8 /* VisibleWhenFocusedModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleWhenFocusedModifier.swift; sourceTree = "<group>"; };
+		383AF4682BDF2510002F64D8 /* HeroHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderView.swift; sourceTree = "<group>"; };
+		384591222BF26D3E003CD0E2 /* SidebarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarContentView.swift; sourceTree = "<group>"; };
+		386D05E52BE97B1700E143DA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		38C5AFB02BBF18B5009C6DC6 /* tvOS SwiftUI media catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tvOS SwiftUI media catalog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38C5AFB32BBF18B5009C6DC6 /* TVCatalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCatalogApp.swift; sourceTree = "<group>"; };
+		38C5AFB52BBF18B5009C6DC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		38C5AFB72BBF18B6009C6DC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38C5AFBA2BBF18B6009C6DC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		38DF62752BDF2BE100F730EE /* MovieShelf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieShelf.swift; sourceTree = "<group>"; };
+		38DF62772BDF2D3200F730EE /* TVMusicShelf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMusicShelf.swift; sourceTree = "<group>"; };
+		38DF627A2BDF3CB100F730EE /* CodeSampleArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSampleArtwork.swift; sourceTree = "<group>"; };
+		38DF62AA2BE3166600F730EE /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		38DF62AC2BE3168200F730EE /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		38DF62AD2BE3168200F730EE /* CardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentView.swift; sourceTree = "<group>"; };
+		38DF62AE2BE3168200F730EE /* CardShelf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardShelf.swift; sourceTree = "<group>"; };
+		38DF62AF2BE3168200F730EE /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		38DF62B12BE3168200F730EE /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		45C9287ADBEABFAAF70B1C52 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		AD246972C56C6D1ABD245506 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		BF5A0D50273E3444EB7F1FEF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38C5AFAD2BBF18B5009C6DC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0507B57884E2F871A78DE1EF /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				AD246972C56C6D1ABD245506 /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = "";
+			sourceTree = "<group>";
+		};
+		383AF4652BDF238F002F64D8 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				383AF4662BDF23A4002F64D8 /* VisibleWhenFocusedModifier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		38C5AFA72BBF18B5009C6DC6 = {
+			isa = PBXGroup;
+			children = (
+				BF5A0D50273E3444EB7F1FEF /* README.md */,
+				38C5AFB22BBF18B5009C6DC6 /* TVCatalog */,
+				38C5AFB12BBF18B5009C6DC6 /* Products */,
+				656B12863EFF5D1B73F0F4FD /* Configuration */,
+				0507B57884E2F871A78DE1EF /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		38C5AFB12BBF18B5009C6DC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38C5AFB02BBF18B5009C6DC6 /* tvOS SwiftUI media catalog.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38C5AFB22BBF18B5009C6DC6 /* TVCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				38C5AFB32BBF18B5009C6DC6 /* TVCatalogApp.swift */,
+				38C5AFB52BBF18B5009C6DC6 /* ContentView.swift */,
+				384591222BF26D3E003CD0E2 /* SidebarContentView.swift */,
+				38DF62B12BE3168200F730EE /* StackView.swift */,
+				38DF62AC2BE3168200F730EE /* ButtonsView.swift */,
+				38DF62AF2BE3168200F730EE /* DescriptionView.swift */,
+				386D05E52BE97B1700E143DA /* SearchView.swift */,
+				383AF4682BDF2510002F64D8 /* HeroHeaderView.swift */,
+				38DF62752BDF2BE100F730EE /* MovieShelf.swift */,
+				38DF62772BDF2D3200F730EE /* TVMusicShelf.swift */,
+				38DF62AE2BE3168200F730EE /* CardShelf.swift */,
+				38DF62AD2BE3168200F730EE /* CardContentView.swift */,
+				38DF62792BDF3C9600F730EE /* ArtworkGenerators */,
+				383AF4652BDF238F002F64D8 /* ViewModifiers */,
+				38C5AFB72BBF18B6009C6DC6 /* Assets.xcassets */,
+				38C5AFB92BBF18B6009C6DC6 /* Preview Content */,
+			);
+			path = TVCatalog;
+			sourceTree = "<group>";
+		};
+		38C5AFB92BBF18B6009C6DC6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				38C5AFBA2BBF18B6009C6DC6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		38DF62792BDF3C9600F730EE /* ArtworkGenerators */ = {
+			isa = PBXGroup;
+			children = (
+				38DF627A2BDF3CB100F730EE /* CodeSampleArtwork.swift */,
+				38DF62AA2BE3166600F730EE /* Asset.swift */,
+			);
+			name = ArtworkGenerators;
+			path = Artwork;
+			sourceTree = "<group>";
+		};
+		656B12863EFF5D1B73F0F4FD /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				45C9287ADBEABFAAF70B1C52 /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38C5AFAF2BBF18B5009C6DC6 /* TVCatalog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38C5AFBE2BBF18B6009C6DC6 /* Build configuration list for PBXNativeTarget "TVCatalog" */;
+			buildPhases = (
+				38C5AFAC2BBF18B5009C6DC6 /* Sources */,
+				38C5AFAD2BBF18B5009C6DC6 /* Frameworks */,
+				38C5AFAE2BBF18B5009C6DC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TVCatalog;
+			productName = TVCatalog;
+			productReference = 38C5AFB02BBF18B5009C6DC6 /* tvOS SwiftUI media catalog.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38C5AFA82BBF18B5009C6DC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					38C5AFAF2BBF18B5009C6DC6 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 38C5AFAB2BBF18B5009C6DC6 /* Build configuration list for PBXProject "TVCatalog" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38C5AFA72BBF18B5009C6DC6;
+			productRefGroup = 38C5AFB12BBF18B5009C6DC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38C5AFAF2BBF18B5009C6DC6 /* TVCatalog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38C5AFAE2BBF18B5009C6DC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38C5AFBB2BBF18B6009C6DC6 /* Preview Assets.xcassets in Resources */,
+				38C5AFB82BBF18B6009C6DC6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38C5AFAC2BBF18B5009C6DC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DF62782BDF2D3200F730EE /* TVMusicShelf.swift in Sources */,
+				38C5AFB62BBF18B5009C6DC6 /* ContentView.swift in Sources */,
+				383AF4672BDF23A4002F64D8 /* VisibleWhenFocusedModifier.swift in Sources */,
+				38DF62B22BE3168200F730EE /* DescriptionView.swift in Sources */,
+				38DF62B32BE3168200F730EE /* CardShelf.swift in Sources */,
+				386D05E62BE97B1700E143DA /* SearchView.swift in Sources */,
+				384591232BF26D3E003CD0E2 /* SidebarContentView.swift in Sources */,
+				38DF62B52BE3168200F730EE /* StackView.swift in Sources */,
+				38DF62B62BE3168200F730EE /* ButtonsView.swift in Sources */,
+				38DF62B72BE3168200F730EE /* CardContentView.swift in Sources */,
+				38C5AFB42BBF18B5009C6DC6 /* TVCatalogApp.swift in Sources */,
+				383AF4692BDF2510002F64D8 /* HeroHeaderView.swift in Sources */,
+				38DF627B2BDF3CB100F730EE /* CodeSampleArtwork.swift in Sources */,
+				38DF62AB2BE3166600F730EE /* Asset.swift in Sources */,
+				38DF62762BDF2BE100F730EE /* MovieShelf.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		38C5AFBC2BBF18B6009C6DC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45C9287ADBEABFAAF70B1C52 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TVOS_DEPLOYMENT_TARGET = 18.0;
+			};
+			name = Debug;
+		};
+		38C5AFBD2BBF18B6009C6DC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45C9287ADBEABFAAF70B1C52 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
+				TVOS_DEPLOYMENT_TARGET = 18.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38C5AFBF2BBF18B6009C6DC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45C9287ADBEABFAAF70B1C52 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TVCatalog/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.TVCatalog${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "tvOS SwiftUI media catalog";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		38C5AFC02BBF18B6009C6DC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45C9287ADBEABFAAF70B1C52 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TVCatalog/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.TVCatalog${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "tvOS SwiftUI media catalog";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38C5AFAB2BBF18B5009C6DC6 /* Build configuration list for PBXProject "TVCatalog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38C5AFBC2BBF18B6009C6DC6 /* Debug */,
+				38C5AFBD2BBF18B6009C6DC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38C5AFBE2BBF18B6009C6DC6 /* Build configuration list for PBXNativeTarget "TVCatalog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38C5AFBF2BBF18B6009C6DC6 /* Debug */,
+				38C5AFC02BBF18B6009C6DC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38C5AFA82BBF18B5009C6DC6 /* Project object */;
+}

@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		264C8AC82B47507200A5589D /* SwiftUIArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264C8AC72B47507200A5589D /* SwiftUIArcView.swift */; };
+		264C8AE42B4772EB00A5589D /* UIViewArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264C8AE32B4772EB00A5589D /* UIViewArcView.swift */; };
+		268A76602B323B0F001AEA3C /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 268A765F2B323B0F001AEA3C /* RealityKitContent */; };
+		268A76622B323B0F001AEA3C /* MultiDimensionalImmersiveContentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A76612B323B0F001AEA3C /* MultiDimensionalImmersiveContentApp.swift */; };
+		268A766A2B323B12001AEA3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 268A76692B323B12001AEA3C /* Assets.xcassets */; };
+		268A766D2B323B12001AEA3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 268A766C2B323B12001AEA3C /* Preview Assets.xcassets */; };
+		26910FE92B58A53700EF963D /* CALayerArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26910FE82B58A53700EF963D /* CALayerArcView.swift */; };
+		26910FEB2B58A56B00EF963D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26910FEA2B58A56B00EF963D /* Extensions.swift */; };
+		26910FEE2B58A87100EF963D /* CALayerArcRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26910FED2B58A87100EF963D /* CALayerArcRepresentable.swift */; };
+		26910FF22B58A8FF00EF963D /* UIViewArcRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26910FF12B58A8FF00EF963D /* UIViewArcRepresentable.swift */; };
+		26E493F42B71E21C00CEBC8E /* RainbowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E493F32B71E21C00CEBC8E /* RainbowView.swift */; };
+		26F33C4E2B6AB2620002BF85 /* RainbowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F33C4D2B6AB2620002BF85 /* RainbowModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0E1AC3B90B33DA54E8B0B9B5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		264C8AC72B47507200A5589D /* SwiftUIArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIArcView.swift; sourceTree = "<group>"; };
+		264C8AE32B4772EB00A5589D /* UIViewArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewArcView.swift; sourceTree = "<group>"; };
+		268A765A2B323B0F001AEA3C /* MultiDimensionalImmersiveContent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiDimensionalImmersiveContent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		268A765E2B323B0F001AEA3C /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		268A76612B323B0F001AEA3C /* MultiDimensionalImmersiveContentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDimensionalImmersiveContentApp.swift; sourceTree = "<group>"; };
+		268A76692B323B12001AEA3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		268A766C2B323B12001AEA3C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		268A766E2B323B12001AEA3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26910FE82B58A53700EF963D /* CALayerArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerArcView.swift; sourceTree = "<group>"; };
+		26910FEA2B58A56B00EF963D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		26910FED2B58A87100EF963D /* CALayerArcRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerArcRepresentable.swift; sourceTree = "<group>"; };
+		26910FF12B58A8FF00EF963D /* UIViewArcRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewArcRepresentable.swift; sourceTree = "<group>"; };
+		26E493F32B71E21C00CEBC8E /* RainbowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainbowView.swift; sourceTree = "<group>"; };
+		26F33C4D2B6AB2620002BF85 /* RainbowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainbowModel.swift; sourceTree = "<group>"; };
+		67CA43C910811F0FAF0C8F90 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		E027FD1ABBCC3DEFAE252569 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		268A76572B323B0F001AEA3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268A76602B323B0F001AEA3C /* RealityKitContent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26282D252B8528F200F6976E /* SwiftUIArch */ = {
+			isa = PBXGroup;
+			children = (
+				264C8AC72B47507200A5589D /* SwiftUIArcView.swift */,
+			);
+			path = SwiftUIArch;
+			sourceTree = "<group>";
+		};
+		268A76512B323B0F001AEA3C = {
+			isa = PBXGroup;
+			children = (
+				0E1AC3B90B33DA54E8B0B9B5 /* README.md */,
+				268A765C2B323B0F001AEA3C /* MultiDimensionalImmersiveContent */,
+				268A765D2B323B0F001AEA3C /* Packages */,
+				268A765B2B323B0F001AEA3C /* Products */,
+				4126C7ECDF1931FE6448C2B1 /* Configuration */,
+				CD7DAC178A3DA3B9F9C51692 /* LICENSE */,
+			);
+			sourceTree = "<group>";
+		};
+		268A765B2B323B0F001AEA3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				268A765A2B323B0F001AEA3C /* MultiDimensionalImmersiveContent.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		268A765C2B323B0F001AEA3C /* MultiDimensionalImmersiveContent */ = {
+			isa = PBXGroup;
+			children = (
+				268A76612B323B0F001AEA3C /* MultiDimensionalImmersiveContentApp.swift */,
+				26E493F32B71E21C00CEBC8E /* RainbowView.swift */,
+				26F33C4D2B6AB2620002BF85 /* RainbowModel.swift */,
+				26282D252B8528F200F6976E /* SwiftUIArch */,
+				26910FEC2B58A85E00EF963D /* CALayerArch */,
+				26910FE72B58A51A00EF963D /* UIViewArch */,
+				26910FEA2B58A56B00EF963D /* Extensions.swift */,
+				268A76692B323B12001AEA3C /* Assets.xcassets */,
+				268A766E2B323B12001AEA3C /* Info.plist */,
+				268A766B2B323B12001AEA3C /* Preview Content */,
+			);
+			path = MultiDimensionalImmersiveContent;
+			sourceTree = "<group>";
+		};
+		268A765D2B323B0F001AEA3C /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				268A765E2B323B0F001AEA3C /* RealityKitContent */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		268A766B2B323B12001AEA3C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				268A766C2B323B12001AEA3C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		26910FE72B58A51A00EF963D /* UIViewArch */ = {
+			isa = PBXGroup;
+			children = (
+				26910FF12B58A8FF00EF963D /* UIViewArcRepresentable.swift */,
+				264C8AE32B4772EB00A5589D /* UIViewArcView.swift */,
+			);
+			path = UIViewArch;
+			sourceTree = "<group>";
+		};
+		26910FEC2B58A85E00EF963D /* CALayerArch */ = {
+			isa = PBXGroup;
+			children = (
+				26910FED2B58A87100EF963D /* CALayerArcRepresentable.swift */,
+				26910FE82B58A53700EF963D /* CALayerArcView.swift */,
+			);
+			path = CALayerArch;
+			sourceTree = "<group>";
+		};
+		4126C7ECDF1931FE6448C2B1 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				E027FD1ABBCC3DEFAE252569 /* SampleCode.xcconfig */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		CD7DAC178A3DA3B9F9C51692 /* LICENSE */ = {
+			isa = PBXGroup;
+			children = (
+				67CA43C910811F0FAF0C8F90 /* LICENSE.txt */,
+			);
+			name = LICENSE;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		268A76592B323B0F001AEA3C /* MultiDimensionalImmersiveContent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 268A76712B323B12001AEA3C /* Build configuration list for PBXNativeTarget "MultiDimensionalImmersiveContent" */;
+			buildPhases = (
+				268A76562B323B0F001AEA3C /* Sources */,
+				268A76572B323B0F001AEA3C /* Frameworks */,
+				268A76582B323B0F001AEA3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiDimensionalImmersiveContent;
+			packageProductDependencies = (
+				268A765F2B323B0F001AEA3C /* RealityKitContent */,
+			);
+			productName = Rainbow;
+			productReference = 268A765A2B323B0F001AEA3C /* MultiDimensionalImmersiveContent.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		268A76522B323B0F001AEA3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					268A76592B323B0F001AEA3C = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 268A76552B323B0F001AEA3C /* Build configuration list for PBXProject "MultiDimensionalImmersiveContent" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 268A76512B323B0F001AEA3C;
+			productRefGroup = 268A765B2B323B0F001AEA3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				268A76592B323B0F001AEA3C /* MultiDimensionalImmersiveContent */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		268A76582B323B0F001AEA3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268A766A2B323B12001AEA3C /* Assets.xcassets in Resources */,
+				268A766D2B323B12001AEA3C /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		268A76562B323B0F001AEA3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26F33C4E2B6AB2620002BF85 /* RainbowModel.swift in Sources */,
+				26910FE92B58A53700EF963D /* CALayerArcView.swift in Sources */,
+				264C8AE42B4772EB00A5589D /* UIViewArcView.swift in Sources */,
+				26910FEB2B58A56B00EF963D /* Extensions.swift in Sources */,
+				26910FF22B58A8FF00EF963D /* UIViewArcRepresentable.swift in Sources */,
+				268A76622B323B0F001AEA3C /* MultiDimensionalImmersiveContentApp.swift in Sources */,
+				26E493F42B71E21C00CEBC8E /* RainbowView.swift in Sources */,
+				264C8AC82B47507200A5589D /* SwiftUIArcView.swift in Sources */,
+				26910FEE2B58A87100EF963D /* CALayerArcRepresentable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		268A766F2B323B12001AEA3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E027FD1ABBCC3DEFAE252569 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		268A76702B323B12001AEA3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E027FD1ABBCC3DEFAE252569 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		268A76722B323B12001AEA3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E027FD1ABBCC3DEFAE252569 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MultiDimensionalImmersiveContent/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(PRODUCT_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.multidimensionalimmersivecontent${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		268A76732B323B12001AEA3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E027FD1ABBCC3DEFAE252569 /* SampleCode.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MultiDimensionalImmersiveContent/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(PRODUCT_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.multidimensionalimmersivecontent${SAMPLE_CODE_DISAMBIGUATOR}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		268A76552B323B0F001AEA3C /* Build configuration list for PBXProject "MultiDimensionalImmersiveContent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				268A766F2B323B12001AEA3C /* Debug */,
+				268A76702B323B12001AEA3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		268A76712B323B12001AEA3C /* Build configuration list for PBXNativeTarget "MultiDimensionalImmersiveContent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				268A76722B323B12001AEA3C /* Debug */,
+				268A76732B323B12001AEA3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		268A765F2B323B0F001AEA3C /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 268A76522B323B0F001AEA3C /* Project object */;
+}
